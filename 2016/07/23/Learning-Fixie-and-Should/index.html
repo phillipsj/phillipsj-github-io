@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Jamie Phillips"/>
+        <meta property="og:title" content="Learning Fixie and Should"/>
     
 
     <!--Open Graph Description-->
@@ -33,7 +33,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
     
 
     <!--Page Cover-->
@@ -46,7 +46,7 @@
 
     <!-- Title -->
     
-    <title>Archives: 2014 - Jamie Phillips</title>
+    <title>Learning Fixie and Should - Jamie Phillips</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -155,169 +155,78 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('http://www.phillipsj.net/img/banner.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>2014</h1>
+                <div class="post-heading">
+                    <h1>Learning Fixie and Should</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        2016-07-23
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/Open-Source/">#Open Source</a> <a href="/tags/Cake/">#Cake</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2014/11/28/Why-I-picked-Ember/">
-        <h1 class="post-title archive">
-            Why I picked Ember
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2014-11-28
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2014/11/22/Review-ember-cli-101/">
-        <h1 class="post-title archive">
-            Review: ember-cli 101
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2014-11-22
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>To be a good steward of my Cake.XdtTransform project, I decided that I needed to add some unit tests. With such a small project with very little functionality, I took it as an opportunity to learn a new tool. I have looked at the <a href="http://fixie.github.io/" target="_blank" rel="external">Fixie</a> project a few times, but haven’t really given it much thought as I have the most experience with <a href="http://nunit.org/" target="_blank" rel="external">NUnit</a> and <a href="https://xunit.github.io/" target="_blank" rel="external">xUnit</a>. As with any new tool, I wanted to make sure it would work with my intended work flow and of course it does, as it is already in Cake.</p>
+<p>To get started all you have to do is use NuGet to install, then you can start writing your tests. The interesting part is that Fixie relies on convention over configuration and doesn’t require all the ceremony of attributes. Just create a class that ends with “Tests” in it’s name and the test runner will pick it up. Now, if you are used to a framework that provides an assertion library baked in, that is not Fixie. You will have to pick an assertion library that fits your needs. In the examples for Fixie, <a href="https://github.com/erichexter/Should" target="_blank" rel="external">Should</a> is used, so I decided I would give it a try. Should is a nice library, but you have to think very differently about how to write your test.</p>
+<p>Here is a test in xUnit:</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> [Fact]</span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">Should_Error_If_Source_File_Is_Null</span>(<span class="params"></span>)(<span class="params"></span>)</span>&#123;</span><br><span class="line">     <span class="comment">// Given</span></span><br><span class="line">     <span class="keyword">var</span> fixture = <span class="keyword">new</span> XdtTransformationFixture &#123;SourceFile = <span class="literal">null</span>&#125;;</span><br><span class="line">     </span><br><span class="line">     <span class="comment">// When</span></span><br><span class="line">     <span class="keyword">var</span> result = Record.Exception(() =&gt; fixture.TransformConfig());</span><br><span class="line"></span><br><span class="line">     <span class="comment">// Then</span></span><br><span class="line">     Assert.IsExceptionWithMessage&lt;ArgumentNullException&gt;(result, <span class="string">"sourceFile"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>And here is a test with Fixie:</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ShouldErrorIfSourceFileIsNull</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Given</span></span><br><span class="line">    <span class="keyword">var</span> fixture = <span class="keyword">new</span> XdtTransformationFixture &#123;SourceFile = <span class="literal">null</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// When</span></span><br><span class="line">    <span class="keyword">var</span> result = Record.Exception(() =&gt; fixture.TransformConfig());</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Then</span></span><br><span class="line">    result.ShouldBeType&lt;ArgumentNullException&gt;().ParamName.ShouldEqual(<span class="string">"sourceFile"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>As you can see they are not that different until you get to the assertion. This was the hard part as it is a different way of thinking. You are not comparing two results you are using the result, then you are asserting what the different properties of the result should be. Once I got my mind wrapped around that concept, it became pretty easy to write tests using Should. There are several other choices for assertions and there is a list in the Fixie documentation.</p>
+<p>I really like how Fixie is simple to get started with, uses conventions, and doesn’t provide an assertion library by default. It has made me think just a little differently about choices. Funny how you don’t think you can use a different assertion library with your go to unit testing framework, but you can. So you like Should, I don’t see any reason you couldn’t use it with your favorite unit testing library. </p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2014/11/19/Ember-CLI-and-Google-Maps/">
-        <h1 class="post-title archive">
-            Ember-CLI and Google Maps
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2014-11-19
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
             
-                <div class="post-preview">
-    <a href="/2014/11/19/Moment-js-and-Ember-CLI/">
-        <h1 class="post-title archive">
-            Moment.js and Ember-CLI
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2014-11-19
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2014/11/17/Ember-Helpers-Testing/">
-        <h1 class="post-title archive">
-            Ember Helpers: Testing
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2014-11-17
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2014/11/05/Ember-Frustration/">
-        <h1 class="post-title archive">
-            Ember Frustration
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2014-11-05
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2014/11/04/Helpers-in-EmberJS/">
-        <h1 class="post-title archive">
-            Helpers in EmberJS
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2014-11-04
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2014/11/03/New-Project-with-EmberJS/">
-        <h1 class="post-title archive">
-            New Project with EmberJS
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2014-11-03
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2014/09/22/Book-Club-Confident-Ruby/">
-        <h1 class="post-title archive">
-            Book Club: Confident Ruby
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2014-09-22
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2014/09/08/Shinken-Day-One/">
-        <h1 class="post-title archive">
-            Shinken Day One
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2014-09-08
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-        <li class="next"><a href="/archives/2014/page/2/">Older Posts  &rarr;</a></li>
-    
-</ul>
         </div>
     </div>
-</div>
-
-
+</article>
 
     <!-- Footer -->
     <hr />

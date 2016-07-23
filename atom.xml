@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.phillipsj.net/"/>
-  <updated>2016-07-19T02:48:30.898Z</updated>
+  <updated>2016-07-23T14:49:16.311Z</updated>
   <id>http://www.phillipsj.net/</id>
   
   <author>
@@ -14,6 +14,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Learning Fixie and Should</title>
+    <link href="http://www.phillipsj.net/2016/07/23/Learning-Fixie-and-Should/"/>
+    <id>http://www.phillipsj.net/2016/07/23/Learning-Fixie-and-Should/</id>
+    <published>2016-07-23T14:22:51.000Z</published>
+    <updated>2016-07-23T14:49:16.311Z</updated>
+    
+    <content type="html">&lt;p&gt;To be a good steward of my Cake.XdtTransform project, I decided that I needed to add some unit tests. With such a small project with very little functionality, I took it as an opportunity to learn a new tool. I have looked at the &lt;a href=&quot;http://fixie.github.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Fixie&lt;/a&gt; project a few times, but haven’t really given it much thought as I have the most experience with &lt;a href=&quot;http://nunit.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;NUnit&lt;/a&gt; and &lt;a href=&quot;https://xunit.github.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;xUnit&lt;/a&gt;. As with any new tool, I wanted to make sure it would work with my intended work flow and of course it does, as it is already in Cake.&lt;/p&gt;
+&lt;p&gt;To get started all you have to do is use NuGet to install, then you can start writing your tests. The interesting part is that Fixie relies on convention over configuration and doesn’t require all the ceremony of attributes. Just create a class that ends with “Tests” in it’s name and the test runner will pick it up. Now, if you are used to a framework that provides an assertion library baked in, that is not Fixie. You will have to pick an assertion library that fits your needs. In the examples for Fixie, &lt;a href=&quot;https://github.com/erichexter/Should&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Should&lt;/a&gt; is used, so I decided I would give it a try. Should is a nice library, but you have to think very differently about how to write your test.&lt;/p&gt;
+&lt;p&gt;Here is a test in xUnit:&lt;/p&gt;
+&lt;figure class=&quot;highlight csharp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; [Fact]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt; &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Should_Error_If_Source_File_Is_Null&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;)&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;span class=&quot;comment&quot;&gt;// Given&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; fixture = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; XdtTransformationFixture &amp;#123;SourceFile = &lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;span class=&quot;comment&quot;&gt;// When&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; result = Record.Exception(() =&amp;gt; fixture.TransformConfig());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     &lt;span class=&quot;comment&quot;&gt;// Then&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;     Assert.IsExceptionWithMessage&amp;lt;ArgumentNullException&amp;gt;(result, &lt;span class=&quot;string&quot;&gt;&quot;sourceFile&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;And here is a test with Fixie:&lt;/p&gt;
+&lt;figure class=&quot;highlight csharp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;ShouldErrorIfSourceFileIsNull&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;&lt;/span&gt;) &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// Given&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; fixture = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; XdtTransformationFixture &amp;#123;SourceFile = &lt;span class=&quot;literal&quot;&gt;null&lt;/span&gt;&amp;#125;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// When&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; result = Record.Exception(() =&amp;gt; fixture.TransformConfig());&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;comment&quot;&gt;// Then&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    result.ShouldBeType&amp;lt;ArgumentNullException&amp;gt;().ParamName.ShouldEqual(&lt;span class=&quot;string&quot;&gt;&quot;sourceFile&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;As you can see they are not that different until you get to the assertion. This was the hard part as it is a different way of thinking. You are not comparing two results you are using the result, then you are asserting what the different properties of the result should be. Once I got my mind wrapped around that concept, it became pretty easy to write tests using Should. There are several other choices for assertions and there is a list in the Fixie documentation.&lt;/p&gt;
+&lt;p&gt;I really like how Fixie is simple to get started with, uses conventions, and doesn’t provide an assertion library by default. It has made me think just a little differently about choices. Funny how you don’t think you can use a different assertion library with your go to unit testing framework, but you can. So you like Should, I don’t see any reason you couldn’t use it with your favorite unit testing library. &lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;To be a good steward of my Cake.XdtTransform project, I decided that I needed to add some unit tests. With such a small project with very
+    
+    </summary>
+    
+    
+      <category term="Open Source" scheme="http://www.phillipsj.net/tags/Open-Source/"/>
+    
+      <category term="Cake" scheme="http://www.phillipsj.net/tags/Cake/"/>
+    
+  </entry>
   
   <entry>
     <title>Integrity Scan</title>
@@ -555,53 +585,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Inspiration, Software Faster</title>
-    <link href="http://www.phillipsj.net/2015/04/20/Inspiration-Software-Faster/"/>
-    <id>http://www.phillipsj.net/2015/04/20/Inspiration-Software-Faster/</id>
-    <published>2015-04-21T00:00:00.000Z</published>
-    <updated>2016-05-31T00:23:25.153Z</updated>
-    
-    <content type="html">&lt;p&gt;I typically listen to podcasts while I mow my yard. I find mowing relaxing and&lt;br&gt;enjoy doing it myself. However, some of the recent episodes of the podcasts that&lt;br&gt;I like did not catch my interest, so I went digging through some archives. I&lt;br&gt;stumbled upon &lt;a href=&quot;http://www.dotnetrocks.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DotNetRocks&lt;/a&gt; episode &lt;a href=&quot;http://www.dotnetrocks.com/default.aspx?showNum=1118&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;1118&lt;/a&gt; with &lt;a href=&quot;http://dannorth.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Dan North&lt;/a&gt;. All I can say is wow,&lt;br&gt;what an episode. I started out my career with the view point that I just needed&lt;br&gt;to deliver software that made peoples life better. I didn’t care about the&lt;br&gt;craftsmanship, as long as it worked and people found it useful, I was happy.&lt;br&gt;Somewhere along the way I lost that, over my short eight year career I became&lt;br&gt;to focused on writing “great” software, that I lost my primary focus, which&lt;br&gt;was writing software that delivered business value. So here is the email&lt;br&gt;that I sent my team today, you will notice lots of qoutes and paraphrasing&lt;br&gt;from that episode. I just wanted to share and hope others get back to what&lt;br&gt;really matters, putting solutions in the hands of people to improve their&lt;br&gt;lives.&lt;/p&gt;
-&lt;h2 id=&quot;The-Email&quot;&gt;&lt;a href=&quot;#The-Email&quot; class=&quot;headerlink&quot; title=&quot;The Email&quot;&gt;&lt;/a&gt;The Email&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;The goal of software delivery is to minimize the lead time to business&lt;br&gt;impact. Everything else is detail.&lt;br&gt;—Dan North&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;This is super important concept to understand. We are here to add value to the&lt;br&gt;business so delivering impactful improvements and solutions is what is the most&lt;br&gt;important. The &lt;a href=&quot;http://agilemanifesto.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Agile Manifesto&lt;/a&gt; is not about doing SCRUM, Extreme Programming,&lt;br&gt;etc. These are all commoditized versions of the ideas behind the manifesto that&lt;br&gt;have occurred over the 14 years following it. I think our team is a great&lt;br&gt;example of all of these values. We do lots of these already and I think we have&lt;br&gt;good values as a team. We are integrated into the business and now that all of&lt;br&gt;us are sitting with the business, the opportunities to add more value should&lt;br&gt;be more evident.&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;Velocity = Speed in a direction&lt;br&gt;—Dan North&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;&lt;p&gt;Story points are not points going toward a particular goal. We have lost&lt;br&gt;sight of solving business problems, agile is now about producing software&lt;br&gt;faster. We have strayed from the whole point.&lt;br&gt;—Dan North&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;&lt;p&gt;Nothing we deliver is worth anything unless it delivers the businesses&lt;br&gt;objective.&lt;br&gt;—Dan North&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Agile metrics are total BS, they are worthless as far as the business is&lt;br&gt;concerned, because it doesn’t answer the questions that the business cares&lt;br&gt;about. We should use business metrics to determine how effective we are.&lt;br&gt;A fine example of that is the call center metrics that were displayed at the&lt;br&gt;community meeting. Those are the types of metrics we should be measure using.&lt;br&gt;Points, sprints, etc. doesn’t show the business value that we are actually&lt;br&gt;delivering.&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;Until customers are actually using it,&lt;br&gt;then we are making stuff up.&lt;br&gt;—Richard Campbell&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;&lt;p&gt;Two conflicting values, simultaneously. I will write the best software I&lt;br&gt;can. I will have not emotional attachment to the software that I write.&lt;br&gt;Transfer emotional attachment of the code to the product, the impact on&lt;br&gt;users. Cared less about the beauty of the code and more on the impact on&lt;br&gt;success and happiness of the users. Software is the means to the end.&lt;br&gt;As little software as needed to get there.&lt;br&gt;—Dan North&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;&lt;p&gt;Successful software teams blur the lines between the business&lt;br&gt;and development.&lt;br&gt;—Dan North&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;So I think we should keep doing the bi-weekly planning/retrospective meeting&lt;br&gt;that sets goals, but I think we should do away with points and I don’t think we&lt;br&gt;really need a scrum master, but an organizer. We are all “scrum masters” and we&lt;br&gt;should keep each other moving forward and impacting the business. We need to&lt;br&gt;keep having our “SCRUMS” since that is super valuable interaction, maybe we&lt;br&gt;should call them huddles or something else as not to confuse our approach with&lt;br&gt;a well-known process.&lt;/p&gt;
-&lt;p&gt;I also think we should determine all the business metrics that are reflective&lt;br&gt;of the work we are doing and we should monitor these to determine the type of&lt;br&gt;impact we are having. Some of these may take a complete year before coming to&lt;br&gt;fruition, but we should be playing the long game to begin with, the short game&lt;br&gt;will be evident in the attitudes that our customers have about us.&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;GANTT Chart = Product Backlog&lt;br&gt;—Dan North&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;(&lt;em&gt;Borrowed from Dan North&lt;/em&gt;) So think about it like surgery.  We don’t want more&lt;br&gt;stitches more procedures, we want the surgeon to use the least invasive&lt;br&gt;procedure to treat the medical issue. That is how we should look at what we do.&lt;br&gt;What is the simplest solution we can provide that is technically sound and eases&lt;br&gt;the businesses issue.&lt;/p&gt;
-&lt;p&gt;So I know this is very long, but I think that we actually have our process.&lt;br&gt;I have spent a lot of time focusing on process improvement, when I should have&lt;br&gt;been focusing on distilling the process that was emerging out of how we are&lt;br&gt;actually delivering value to the business. Lets keep shipping features that add&lt;br&gt;value to the business and individual users. I want to create a product that&lt;br&gt;people love to use and makes their day better. We have been working hard to get&lt;br&gt;there and it is evident in the call center metrics, so lets keep doing this&lt;br&gt;until we stop being successful or until we determine that it is no longer&lt;br&gt;adding value, then we will evolve.&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;I typically listen to podcasts while I mow my yard. I find mowing relaxing and&lt;br&gt;enjoy doing it myself. However, some of the recent epis
-    
-    </summary>
-    
-    
-      <category term="Agile" scheme="http://www.phillipsj.net/tags/Agile/"/>
-    
-      <category term="Shipping" scheme="http://www.phillipsj.net/tags/Shipping/"/>
-    
-      <category term="Craftsmanship" scheme="http://www.phillipsj.net/tags/Craftsmanship/"/>
     
   </entry>
   
