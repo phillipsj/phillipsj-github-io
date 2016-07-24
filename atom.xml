@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.phillipsj.net/"/>
-  <updated>2016-07-23T14:49:16.311Z</updated>
+  <updated>2016-07-24T02:48:40.018Z</updated>
   <id>http://www.phillipsj.net/</id>
   
   <author>
@@ -14,6 +14,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Shockingly Sweet: Electron and Cake</title>
+    <link href="http://www.phillipsj.net/2016/07/23/Shockingly-Sweet-Electron-and-Cake/"/>
+    <id>http://www.phillipsj.net/2016/07/23/Shockingly-Sweet-Electron-and-Cake/</id>
+    <published>2016-07-24T02:48:40.000Z</published>
+    <updated>2016-07-24T02:48:40.018Z</updated>
+    
+    <content type="html">&lt;p&gt;We have recently started using &lt;a href=&quot;http://electron.atom.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Electron&lt;/a&gt; for an application we have been development. We have enjoyed the experience so much we have decided as a team that all desktop applications going forward will be Electron based. This is great as it keeps the web development skills sharp even when making a desktop application, plus it leverages our knowledge in web technologies and we don’t have to context switch. &lt;/p&gt;
+&lt;p&gt;To keep the consistency with all our other projects we decided to use Cake to build our Electron applications. We use &lt;a href=&quot;https://github.com/electron-userland/electron-builder&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;electron-builder&lt;/a&gt; to perform the heavy lifting with a few NPM scripts.  We then execute those NPM scripts using Cake. You can take a look at the complete solution &lt;a href=&quot;https://github.com/phillipsj/shockingly-sweet&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;here&lt;/a&gt;. Below I will walk you through the Cake file.&lt;/p&gt;
+&lt;p&gt;So we start off by getting the &lt;a href=&quot;https://github.com/philo/cake-npm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Cake.Npm&lt;/a&gt; addin.&lt;/p&gt;
+&lt;figure class=&quot;highlight csharp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#addin Cake.Npm&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;With the addin for NPM added we have the typical arguments section and as far as the default task, is typically what you see in Cake. We are going to focus on the Electron specific tasks.&lt;/p&gt;
+&lt;p&gt;Calling an NPM script that configures the environment and performing an NPM install:&lt;/p&gt;
+&lt;figure class=&quot;highlight csharp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Task(&lt;span class=&quot;string&quot;&gt;&quot;Npm-Install&quot;&lt;/span&gt;)   &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .Does(() =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       Npm.RunScript(&lt;span class=&quot;string&quot;&gt;&quot;setupEnv&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       Npm.Install();&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Running a clean on the project using an NPM script.&lt;/p&gt;
+&lt;figure class=&quot;highlight csharp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Task(&lt;span class=&quot;string&quot;&gt;&quot;Clean&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .IsDependentOn(&lt;span class=&quot;string&quot;&gt;&quot;Npm-Install&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .Does(() =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        Npm.RunScript(&lt;span class=&quot;string&quot;&gt;&quot;clean&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Now we have the main part, which is running the dist NPM script that packages the application and builds the executable.&lt;/p&gt;
+&lt;figure class=&quot;highlight csharp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Task(&lt;span class=&quot;string&quot;&gt;&quot;Build&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .IsDependentOn(&lt;span class=&quot;string&quot;&gt;&quot;Clean&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    .Does(() =&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        Npm.RunScript(&lt;span class=&quot;string&quot;&gt;&quot;dist&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;So yes, the majority of this process relies upon NPM scripts, which we could easily just move the calls into the Cake file and out of the package.json.  The main advantage that I am not showing here, is the addins that we use like &lt;a href=&quot;https://github.com/RadioSystems/Cake.AzureStorage&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Cake.AzureStorage&lt;/a&gt; to push the packaged application to Azure, or some of the other addins we use that are just easier for us to create that functionality in .NET. &lt;/p&gt;
+&lt;p&gt;Hope this is helpful.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;We have recently started using &lt;a href=&quot;http://electron.atom.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Electron&lt;/a&gt; for an application we have 
+    
+    </summary>
+    
+    
+      <category term="Open Source" scheme="http://www.phillipsj.net/tags/Open-Source/"/>
+    
+      <category term="Cake" scheme="http://www.phillipsj.net/tags/Cake/"/>
+    
+      <category term="Electron" scheme="http://www.phillipsj.net/tags/Electron/"/>
+    
+  </entry>
   
   <entry>
     <title>Learning Fixie and Should</title>
@@ -563,28 +600,6 @@
       <category term="Microsoft" scheme="http://www.phillipsj.net/tags/Microsoft/"/>
     
       <category term="Hardware" scheme="http://www.phillipsj.net/tags/Hardware/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Wow, lots of agile stuff</title>
-    <link href="http://www.phillipsj.net/2015/05/13/Wow-lots-of-agile-stuff/"/>
-    <id>http://www.phillipsj.net/2015/05/13/Wow-lots-of-agile-stuff/</id>
-    <published>2015-05-14T00:00:00.000Z</published>
-    <updated>2016-05-31T00:30:37.064Z</updated>
-    
-    <content type="html">&lt;p&gt;A couple of weeks after my last post about Software Faster, there seems to be&lt;br&gt;lots of these posts popping up in my reader about agile. We may have reached&lt;br&gt;this critical point in the agile movement were we are starting to realize that&lt;br&gt;in the name of being agile we are being rigid. Here are the recent posts that&lt;br&gt;jumped out at me.&lt;/p&gt;
-&lt;h2 id=&quot;Agile-Results&quot;&gt;&lt;a href=&quot;#Agile-Results&quot; class=&quot;headerlink&quot; title=&quot;Agile Results&quot;&gt;&lt;/a&gt;Agile Results&lt;/h2&gt;&lt;p&gt;This &lt;a href=&quot;http://blogs.msdn.com/b/jmeier/archive/2015/05/08/task-management-for-teams.aspx&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;post&lt;/a&gt; my J.D. Meier about “Task Management for Teams” is very interesting&lt;br&gt;and I didn’t realize that “Agile Results” existed until this post. Funny thing&lt;br&gt;about this method it is very similiar to what our team decided that we are&lt;br&gt;going to report on. Ours are very business oriented and focused, but in general&lt;br&gt;this is what we have been doing for well over nine months and the business is&lt;br&gt;super happy and so is upper management as listing your “goals” aka Wins for each&lt;br&gt;time box makes it clear what we are trying to do and if we got it done. I have&lt;br&gt;purchased the &lt;a href=&quot;http://gettingresults.com/wiki/Main_Page&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;book&lt;/a&gt; and will do a full review shortly, but it looks like it&lt;br&gt;is going to provide some additional techniques to tweak what we are already&lt;br&gt;doing.&lt;/p&gt;
-&lt;h2 id=&quot;The-Failure-of-Agile&quot;&gt;&lt;a href=&quot;#The-Failure-of-Agile&quot; class=&quot;headerlink&quot; title=&quot;The Failure of Agile&quot;&gt;&lt;/a&gt;The Failure of Agile&lt;/h2&gt;&lt;p&gt;Another post about &lt;a href=&quot;http://blog.toolshed.com/2015/05/the-failure-of-agile.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;The Failure of Agile&lt;/a&gt; was posted last week by Andy Hunt&lt;br&gt;about how he thinks agile has lost its way. I couldn’t agree more, we focus a&lt;br&gt;lot on a specific technique and rules, which are great for getting started, but&lt;br&gt;at some point the training wheels need to be removed and team members need to&lt;br&gt;adapt their methods to focus on how they and their customers do business. He&lt;br&gt;introduces a new method called &lt;a href=&quot;http://growsmethod.com/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GROWS&lt;/a&gt; which is really what succesful teams have&lt;br&gt;been doing from the start. I think one of the most important statements in the&lt;br&gt;entire post is when he starts talking about how junior members need the rules.&lt;br&gt;It is true, but if the more senior members of the team are not nurturing the&lt;br&gt;other team members to grow into being truly agile then of course that is when&lt;br&gt;it fails.&lt;/p&gt;
-&lt;p&gt;I am lucky that I am part of a team where we are always growing and learning.&lt;br&gt;We have trust and communication which allows us to truly perform and be&lt;br&gt;adaptive and responsive to the business we support. Our cusotmers are our focus&lt;br&gt;and we try our best to deliver the technical solutions as we need them.&lt;br&gt;Hopefully everything from the above two blog posts can be incorporated into&lt;br&gt;our approaches to aiding our customers.&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;A couple of weeks after my last post about Software Faster, there seems to be&lt;br&gt;lots of these posts popping up in my reader about agile.
-    
-    </summary>
-    
     
   </entry>
   
