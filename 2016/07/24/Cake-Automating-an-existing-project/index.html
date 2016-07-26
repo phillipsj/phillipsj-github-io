@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="A blog about software development and other random musings.">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Jamie Phillips">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Cake: Automating an existing project"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="A blog about software development and other random musings." />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Jamie Phillips"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary" />
+    
+        <meta name="twitter:site" content="phillipsj73>" />
+    
+
+    <!-- Title -->
+    
+    <title>Cake: Automating an existing project - Jamie Phillips</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-56743201-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Jamie Phillips</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/about">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/presentations">
+                            
+                                Presentations
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/phillipsj">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.phillipsj.net/img/banner.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Cake: Automating an existing project</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        2016-07-24
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/Open-Source/">#Open Source</a> <a href="/tags/Cake/">#Cake</a> <a href="/tags/Tutorials/">#Tutorials</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>Hi, my name is Jamie and I am a <a href="http://cakebuild.net/" target="_blank" rel="external">Cake</a> addin author that doesn’t build my addins using Cake. This seems kind of wrong too me and this is a bonus for you. I am going to walk you through how to use Cake to build your project, run your tests, create a <a href="https://www.nuget.org/" target="_blank" rel="external">NuGet</a> package, then publish to NuGet. I am going to walk you through performing this for my <a href="https://github.com/phillipsj/Cake.XdtTransform" target="_blank" rel="external">Cake.XdtTransform</a> project. The project is hosted on GitHub so you can see the final build. I am going to be using the wonderful extension created for <a href="https://code.visualstudio.com/" target="_blank" rel="external">VsCode</a> and will be doing most of my work in it, I will discuss the alternatives if you are not using VsCode. If you are going to continue with VsCode, then I would install the Cake Extension that has been created.</p>
+<p>** Steps 1-2 can be skipped if you go grab those files from the <a href="https://github.com/cake-build/example" target="_blank" rel="external">example</a> project.</p>
+<h2 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1:"></a>Step 1:</h2><p>By default all projects that use Cake starts with two files, the bootstrapper script, <em>build.ps1</em>, if on windows, or <em>build.sh</em>, on linux. The other file that is needed is the cake file, typically called <em>build.cake</em>.  In VsCode, open the project that you want to automate with Cake, open the command palette and run the Cake: Install Bootstrapper command, the select the bootstrapper file type that fits your system, in this example I have selected <em>Powershell</em>.  You should now see the <em>build.ps1</em> file in your project directory. At this point, there is not much more you are going to need to do with the bootstrapper file.</p>
+<p><img src="/images/cake-tutorial/VsCodeCakeBootstrapper.png" alt=""></p>
+<p><img src="/images/cake-tutorial/VsCodeCakeSelectBootstrapperType.png" alt=""></p>
+<p><img src="/images/cake-tutorial/VsCodeCakeSelectBootstrapperInstalled.png" alt=""></p>
+<h2 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2:"></a>Step 2:</h2><p>Now you need to create your <em>build.cake</em> file. Once you have created the file we need to start putting in the basic plumbing that will be required. What is going to be shown below is typically the norm for most cake files, however, it isn’t the only way it can be done. </p>
+<h3 id="Setting-up-arguments"><a href="#Setting-up-arguments" class="headerlink" title="Setting up arguments"></a>Setting up arguments</h3><p>Now you need to grab any arguments you want to pass to your cake file. The first argument we are going to grab that is passed in is the <em>target</em> argument. This will be the task that you want Cake to execute when it runs. It is set to <em>Default</em> if nothing is passed in. The second argument is the <em>configuration</em> that you want to target, it is set to “<em>Release</em> if nothing is passed. </p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> target = Argument(<span class="string">"target"</span>, <span class="string">"Default"</span>);</span><br><span class="line"><span class="keyword">var</span> configuration = Argument(<span class="string">"configuration"</span>, <span class="string">"Release"</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><em>* A special note about arguments. If you open the bootstrapper file you will see that the arguments are parsed out by powershell then passed to your </em>build.cake* file. If you need to extend the arguments you will need to modify the bootstrapper file.</p>
+<h3 id="Let’s-run-Cake"><a href="#Let’s-run-Cake" class="headerlink" title="Let’s run Cake"></a>Let’s run Cake</h3><p>At this point, lets open a powershell window and run:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ .\build.ps1</span><br></pre></td></tr></table></figure>
+<p>You should see the following output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Preparing to run build script...</span><br><span class="line">Running build script...</span><br><span class="line">Analyzing build script...</span><br><span class="line">Processing build script...</span><br><span class="line">Downloading and installing Roslyn...</span><br><span class="line">Installing packages (using https://packages.nuget.org/api/v2)...</span><br><span class="line">Copying files...</span><br><span class="line">Copying Roslyn.Compilers.CSharp.dll...</span><br><span class="line">Copying Roslyn.Compilers.dll...</span><br><span class="line">Deleting installation directory...</span><br><span class="line">Compiling build script...</span><br></pre></td></tr></table></figure>
+<p>You will also notice that a tools folder has been added to your project with a Cake folder, nuget.exe, and a packages.config.  This the bootstrapper getting nuget and configuring it, and then install Cake. This is pretty awesome as it doesn’t require anything to be committed to your repository.</p>
+<p><img src="/images/cake-tutorial/BootstrapperGeneratedFoldersAndFiles.png" alt=""></p>
+<h2 id="Step-3"><a href="#Step-3" class="headerlink" title="Step 3:"></a>Step 3:</h2><p>Now we need to do any preparation. In our example, we need to prepare by setting up our build directory and making our solution file path.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> buildDir = Directory(<span class="string">"./src/Cake.XdtTransform/bin"</span>) + Directory(configuration);</span><br><span class="line"><span class="keyword">var</span> solution = <span class="string">"./src/Cake.XdtTransform.sln"</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>This is very basic, but you can imagine if you have a more complex setup like for a really complex build, you may have dozens of items that need prepared.</p>
+<h2 id="Step-4"><a href="#Step-4" class="headerlink" title="Step 4:"></a>Step 4:</h2><p>Now we get to tasks. This is the targets that you will be executing to perform your build. Lots of items will be going on in this step and I will do my best to walk you through all of these.</p>
+<h3 id="Cleaning-the-Directory"><a href="#Cleaning-the-Directory" class="headerlink" title="Cleaning the Directory"></a>Cleaning the Directory</h3><p>Always a good idea to clean any directories that you will be writing too.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Task(<span class="string">"Clean"</span>)</span><br><span class="line">    .Does(() =&gt;&#123;</span><br><span class="line">        CleanDirectory(buildDir);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="Restoring-NuGet-Packages"><a href="#Restoring-NuGet-Packages" class="headerlink" title="Restoring NuGet Packages"></a>Restoring NuGet Packages</h3><p>This task introduces a new concept. If you look at the <em>.IsDependentOn</em> online, you will notice that we pass it the clean task. What this is doing is telling Cake, hey, before <em>Restore-NuGet-Packages</em> executes, the <em>Clean</em> tasks needs to occur first. This is the method that you will use to link your build tasks together to make sure that no matter which task you pass to be executed any dependent tasks are executed first. Finally, we call <em>NuGetRestore</em> which will fetch our NuGet packages. </p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Task(<span class="string">"Restore-NuGet-Packages"</span>)</span><br><span class="line">    .IsDependentOn(<span class="string">"Clean"</span>)</span><br><span class="line">    .Does(() =&gt; &#123;</span><br><span class="line">        NuGetRestore(solution);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="Buiding-the-solution"><a href="#Buiding-the-solution" class="headerlink" title="Buiding the solution"></a>Buiding the solution</h3><p>Now that we have clean directories and restored NuGet packages we are ready to perform our build. We will create our build task with a dependency on <em>Restore-NuGet-Packages</em> to ensure that our packages are always restored before executing a build. We are going to use MSBuild to build our project.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Task(<span class="string">"Build"</span>)</span><br><span class="line">    .IsDependentOn(<span class="string">"Restore-NuGet-Packages"</span>)</span><br><span class="line">    .Does(() =&gt;&#123;</span><br><span class="line">      <span class="comment">// Use MSBuild</span></span><br><span class="line">      MSBuild(solution, settings =&gt;</span><br><span class="line">        settings.SetConfiguration(configuration));  </span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="Finishing-the-Cake-file"><a href="#Finishing-the-Cake-file" class="headerlink" title="Finishing the Cake file"></a>Finishing the Cake file</h2><p>Now that we have the basics in place, lets finish the basic setup that needs to happen. We need to create a default task that will execute one of the tasks we just defined.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Task(<span class="string">"Default"</span>)</span><br><span class="line">    .IsDependentOn(<span class="string">"Build"</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Next we need to actually tell Cake to run the target parameter, which is you remember when we defined our arguments we defaulted to <em>Default</em>.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">RunTarget(target);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Now we need to execute the Cake file to see if all the work we have done will execute and build our project.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ .\build.ps1</span><br></pre></td></tr></table></figure>
+<p>You should see the following output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line">Preparing to run build script...</span><br><span class="line">Running build script...</span><br><span class="line">Analyzing build script...</span><br><span class="line">Processing build script...</span><br><span class="line">Compiling build script...</span><br><span class="line"></span><br><span class="line">========================================</span><br><span class="line">Clean</span><br><span class="line">========================================</span><br><span class="line">Executing task: Clean</span><br><span class="line">Cleaning directory C:/Users/cphil/code/Cake.XdtTransform/src/Cake.XdtTransform/bin/Release</span><br><span class="line">Finished executing task: Clean</span><br><span class="line"></span><br><span class="line">========================================</span><br><span class="line">Restore-NuGet-Packages</span><br><span class="line">========================================</span><br><span class="line">Executing task: Restore-NuGet-Packages</span><br><span class="line">MSBuild auto-detection: using msbuild version &apos;14.0&apos; from &apos;C:\Program Files (x86)\MSBuild\14.0\bin&apos;.</span><br><span class="line">All packages listed in packages.config are already installed.</span><br><span class="line">Finished executing task: Restore-NuGet-Packages</span><br><span class="line"></span><br><span class="line">========================================</span><br><span class="line">Build</span><br><span class="line">========================================</span><br><span class="line">Executing task: Build</span><br><span class="line">Microsoft (R) Build Engine version 14.0.25420.1</span><br><span class="line">Copyright (C) Microsoft Corporation. All rights reserved.</span><br><span class="line"></span><br><span class="line">Build started 7/24/2016 2:32:43 PM.</span><br><span class="line">     1&gt;Project &quot;C:\Users\cphil\code\Cake.XdtTransform\src\Cake.XdtTransform.sln&quot; on node 1 (Build target(s)).</span><br><span class="line">     1&gt;ValidateSolutionConfiguration:</span><br><span class="line">         Building solution configuration &quot;Release|Any CPU&quot;.</span><br><span class="line">     1&gt;Project &quot;C:\Users\cphil\code\Cake.XdtTransform\src\Cake.XdtTransform.sln&quot; (1) is building &quot;C:\Users\cphil\code\C</span><br><span class="line">       ake.XdtTransform\src\Cake.XdtTransform\Cake.XdtTransform.csproj&quot; (3) on node 1 (default targets).</span><br><span class="line">     ......</span><br><span class="line">     2&gt;Done Building Project &quot;C:\Users\cphil\code\Cake.XdtTransform\src\Cake.XdtTransform.Tests\Cake.XdtTransform.Tests</span><br><span class="line">       .csproj&quot; (default targets).</span><br><span class="line">     1&gt;Done Building Project &quot;C:\Users\cphil\code\Cake.XdtTransform\src\Cake.XdtTransform.sln&quot; (Build target(s)).</span><br><span class="line"></span><br><span class="line">Build succeeded.</span><br><span class="line">    0 Warning(s)</span><br><span class="line">    0 Error(s)</span><br><span class="line"></span><br><span class="line">Time Elapsed 00:00:00.38</span><br><span class="line">Finished executing task: Build</span><br><span class="line"></span><br><span class="line">========================================</span><br><span class="line">Default</span><br><span class="line">========================================</span><br><span class="line">Executing task: Default</span><br><span class="line">Finished executing task: Default</span><br><span class="line"></span><br><span class="line">Task                          Duration</span><br><span class="line">--------------------------------------------------</span><br><span class="line">Clean                         00:00:00.0091045</span><br><span class="line">Restore-NuGet-Packages        00:00:00.3995194</span><br><span class="line">Build                         00:00:00.4472326</span><br><span class="line">Default                       00:00:00.0098848</span><br><span class="line">--------------------------------------------------</span><br><span class="line">Total:                        00:00:00.8657413</span><br></pre></td></tr></table></figure>
+<p>So it looks like we had a successful run of our Cake file. At this point we could just stop, but continue on as now we are getting into the more advanced topics.</p>
+<h2 id="Step-5"><a href="#Step-5" class="headerlink" title="Step 5:"></a>Step 5:</h2><p>In this step we are going to create a task that will execute our unit tests. In this example we are using <a href="http://fixie.github.io/" target="_blank" rel="external">Fixie</a>, however, most major unit testing frameworks are supported. We will be adding a new concept that this step. We are going to start using the <em>tool</em> directive. The <em>tool</em> directive tells Cake that it needs to download additional tools to perform one of the tasks. The <em>tool</em> directive will place the tool package in the <em>tools</em> directory that the bootstrapper downloads NuGet and Cake too.</p>
+<p>At the top of our Cake build file put the following <em>tool</em> directive.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#tool "nuget:?package=Fixie"</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Now that we have the Fixie unit test runner being downloaded as part of our Cake file, we need to create our unit test task. In this task we use a pattern to tell Cake to search all directories looking for a bin folder and a configuration folder that matches and return all dlls with the name <em>Tests.dll</em>. Also note that our task is dependent on the build task.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Task(<span class="string">"Run-Unit-Tests"</span>)</span><br><span class="line">    .IsDependentOn(<span class="string">"Build"</span>)</span><br><span class="line">    .Does(() =&gt;&#123;</span><br><span class="line">        Fixie(<span class="string">"./src/\*\*/bin/"</span> + configuration + <span class="string">"/*.Tests.dll"</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Now that we have our test task in place and I want the default behavior to always run the unit tests. So I need to change the default task.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Task(<span class="string">"Default"</span>)</span><br><span class="line">    .IsDependentOn(<span class="string">"Run-Unit-Tests"</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Now we need to execute our Cake file and make sure nothing has been broken.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ .\build.ps1</span><br></pre></td></tr></table></figure>
+<p>You should see the following output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\cphil\code\Cake.XdtTransform [develop ≡ +0 ~1 -0 !]&gt; .\build.ps1</span><br><span class="line">Preparing to run build script...</span><br><span class="line">Running build script...</span><br><span class="line">Analyzing build script...</span><br><span class="line">Processing build script...</span><br><span class="line">Installing tools...</span><br><span class="line">Compiling build script...</span><br><span class="line"></span><br><span class="line">...................</span><br><span class="line"></span><br><span class="line">========================================</span><br><span class="line">Run-Unit-Tests</span><br><span class="line">========================================</span><br><span class="line">Executing task: Run-Unit-Tests</span><br><span class="line">------ Testing Assembly Cake.XdtTransform.Tests.dll ------</span><br><span class="line"></span><br><span class="line">6 passed, 0 failed, took 0.33 seconds (Fixie 1.0.2).</span><br><span class="line"></span><br><span class="line">Finished executing task: Run-Unit-Tests</span><br><span class="line"></span><br><span class="line">========================================</span><br><span class="line">Default</span><br><span class="line">========================================</span><br><span class="line">Executing task: Default</span><br><span class="line">Finished executing task: Default</span><br><span class="line"></span><br><span class="line">Task                          Duration</span><br><span class="line">--------------------------------------------------</span><br><span class="line">Clean                         00:00:00.0179829</span><br><span class="line">Restore-NuGet-Packages        00:00:00.4070517</span><br><span class="line">Build                         00:00:00.4498772</span><br><span class="line">Run-Unit-Tests                00:00:00.4413167</span><br><span class="line">Default                       00:00:00.0104593</span><br><span class="line">--------------------------------------------------</span><br><span class="line">Total:                        00:00:01.3266878</span><br></pre></td></tr></table></figure>
+<p>It looks like our tests all executed successfully and now we celebrate, but wait what good is all this work if we are not sharing it with the world.</p>
+<p>Step 6:</p>
+<p>If you look in the source directory under the Cake.XdtTransform folder you will notice that there is a nuspec file located in the directory called Cake.XdtTransform.nuspec. Since we have a nuspec file we should go ahead and create a NuGet package while we are here.</p>
+<p>Luckily, the creators of Cake have already created the necessary tools to perform the packaging. All we need to do is create a task. We are going to name the task <em>Package</em> and we are going to make it dependent on the <em>Run-Unit-Tests</em> task, because we do not want to package if we fail our tests. We are not going to make this the default task as we want this task to be intentional.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Task(<span class="string">"Package"</span>)</span><br><span class="line">    .IsDependentOn(<span class="string">"Run-Unit-Tests"</span>)</span><br><span class="line">    .Does(() =&gt;&#123;</span><br><span class="line">        NuGetPack(<span class="string">"./src/Cake.XdtTransform/Cake.XdtTransform.nuspec"</span>, ​<span class="keyword">new</span> NuGetPackSettings());</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Now to test our handy work, we are going to run the Cake file, but this time we are going to pass a target of <em>Package</em>. What this will do is execute the <em>Package</em> task.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ .\build.ps1 -Target Package</span><br></pre></td></tr></table></figure>
+<p>You should see the following output:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\cphil\code\Cake.XdtTransform [develop ≡ +0 ~1 -0 !]&gt; .\build.ps1</span><br><span class="line">Preparing to run build script...</span><br><span class="line">Running build script...</span><br><span class="line">Analyzing build script...</span><br><span class="line">Processing build script...</span><br><span class="line">Installing tools...</span><br><span class="line">Compiling build script...</span><br><span class="line"></span><br><span class="line">...................</span><br><span class="line"></span><br><span class="line">========================================</span><br><span class="line">Package</span><br><span class="line">========================================</span><br><span class="line">Executing task: Package</span><br><span class="line">Attempting to build package from &apos;Cake.XdtTransform.temp.nuspec&apos;.</span><br><span class="line">Successfully created package &apos;C:\Users\cphil\code\Cake.XdtTransform\Cake.XdtTransform.0.10.0.0.nupkg&apos;.</span><br><span class="line">Finished executing task: Package</span><br><span class="line"></span><br><span class="line">Task                          Duration</span><br><span class="line">--------------------------------------------------</span><br><span class="line">Clean                         00:00:00.0127528</span><br><span class="line">Restore-NuGet-Packages        00:00:00.4139956</span><br><span class="line">Build                         00:00:00.4605471</span><br><span class="line">Run-Unit-Tests                00:00:00.4670142</span><br><span class="line">Package                       00:00:00.4101675</span><br><span class="line">--------------------------------------------------</span><br><span class="line">Total:                        00:00:01.7644772</span><br></pre></td></tr></table></figure>
+<h1 id="The-finish-line"><a href="#The-finish-line" class="headerlink" title="The finish line"></a>The finish line</h1><p>So there you go, a basic walk through using Cake to perform the majority of the tasks that will need to be performed when working on a project. I have purposely left off the publishing of the project to a server or in this case NuGet, as there are more steps involved and those tasks are more about preference at that point. I know that I will probably let my CI server for the project, AppVeyor pick up the NuGet packae as an artifact and publish it. I may revist that in the new future as I learn to integrate Cake with a CI server.</p>
+<p>Thanks for reading and hopefully you found this helpful.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                        <li>
+                            <a href="https://twitter.com/phillipsj73" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/phillipsj" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                        <li>
+                            <a href="https://www.linkedin.com/in/jamie-phillips-695927b0" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; Copyright 2016, Jamie Phillips. Powered by <a target="_blank" href="https://hexo.io/">Hexo</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+
+</html>
