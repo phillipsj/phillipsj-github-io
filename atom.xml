@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.phillipsj.net/"/>
-  <updated>2016-07-24T19:24:27.686Z</updated>
+  <updated>2016-07-26T01:48:45.816Z</updated>
   <id>http://www.phillipsj.net/</id>
   
   <author>
@@ -14,6 +14,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Using C# 6 features in Cake</title>
+    <link href="http://www.phillipsj.net/2016/07/25/Using-C-6-features-in-Cake/"/>
+    <id>http://www.phillipsj.net/2016/07/25/Using-C-6-features-in-Cake/</id>
+    <published>2016-07-26T01:47:22.000Z</published>
+    <updated>2016-07-26T01:48:45.816Z</updated>
+    
+    <content type="html">&lt;p&gt;I like a lot of features available in C# 6, but my favorite is string interpolation. I think it makes ecstatically pleasing code. It is much cleaner and more expressive.&lt;/p&gt;
+&lt;figure class=&quot;highlight csharp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; name = &lt;span class=&quot;string&quot;&gt;&quot;Dave&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// String.Format example&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; messageWithFormat = &lt;span class=&quot;keyword&quot;&gt;string&lt;/span&gt;.Format(&lt;span class=&quot;string&quot;&gt;&quot;I&#39;m sorry, &amp;#123;0&amp;#125; I&#39;m afraid I can&#39;t do that.&quot;&lt;/span&gt;, name);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// String Interpolation&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; messageWithInterpolation = &lt;span class=&quot;string&quot;&gt;$&quot;I&#39;m sorry, &lt;span class=&quot;subst&quot;&gt;&amp;#123;name&amp;#125;&lt;/span&gt; I&#39;m afraid I can&#39;t do that.&quot;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;However, by default you cannot use string interpolation in your Cake file as those bits don’t come with Roslyn just yet. This is an extremely easy fix. All you need to do is pass the experimental flag.&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ .\build.ps1 -experimental&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;This just gets old and repetitive and I don’t know about you, but I like staying as close to the leading edge as possible, so I just make a small change to my bootstrapper file to always pass the experimental flag. Roughly on like 188 of your bootstrapper file, just replace the &lt;em&gt;$UseExperimental&lt;/em&gt; variable with the &lt;em&gt;-experimental&lt;/em&gt; flag. &lt;/p&gt;
+&lt;figure class=&quot;highlight powershell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Previous &lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Invoke-Expression&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;&amp;amp; `&quot;&lt;span class=&quot;variable&quot;&gt;$CAKE_EXE&lt;/span&gt;`&quot; `&quot;&lt;span class=&quot;variable&quot;&gt;$Script&lt;/span&gt;`&quot; -target=`&quot;&lt;span class=&quot;variable&quot;&gt;$Target&lt;/span&gt;`&quot; -configuration=`&quot;&lt;span class=&quot;variable&quot;&gt;$Configuration&lt;/span&gt;`&quot; -verbosity=`&quot;&lt;span class=&quot;variable&quot;&gt;$Verbosity&lt;/span&gt;`&quot; &lt;span class=&quot;variable&quot;&gt;$UseMono&lt;/span&gt; &lt;span class=&quot;variable&quot;&gt;$UseDryRun&lt;/span&gt; &lt;span class=&quot;variable&quot;&gt;$UseExperimental&lt;/span&gt; &lt;span class=&quot;variable&quot;&gt;$ScriptArgs&lt;/span&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Altered&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Invoke-Expression&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;&amp;amp; `&quot;&lt;span class=&quot;variable&quot;&gt;$CAKE_EXE&lt;/span&gt;`&quot; `&quot;&lt;span class=&quot;variable&quot;&gt;$Script&lt;/span&gt;`&quot; -target=`&quot;&lt;span class=&quot;variable&quot;&gt;$Target&lt;/span&gt;`&quot; -configuration=`&quot;&lt;span class=&quot;variable&quot;&gt;$Configuration&lt;/span&gt;`&quot; -verbosity=`&quot;&lt;span class=&quot;variable&quot;&gt;$Verbosity&lt;/span&gt;`&quot; &lt;span class=&quot;variable&quot;&gt;$UseMono&lt;/span&gt; &lt;span class=&quot;variable&quot;&gt;$UseDryRun&lt;/span&gt; -experimental &lt;span class=&quot;variable&quot;&gt;$ScriptArgs&lt;/span&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Now you can make your Cake even more elegant, in my opinion. Here are a few examples of places that string interpolation can be used that I enjoy.&lt;/p&gt;
+&lt;figure class=&quot;highlight csharp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// Before&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Fixie(&lt;span class=&quot;string&quot;&gt;&quot;./src/\**/bin/&quot;&lt;/span&gt; + configuration + &lt;span class=&quot;string&quot;&gt;&quot;/*.Tests.dll&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// After&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;Fixie(&lt;span class=&quot;string&quot;&gt;$&quot;./src/\**/bin/&lt;span class=&quot;subst&quot;&gt;&amp;#123;configuration&amp;#125;&lt;/span&gt;/*.Tests.dll&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// Before&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; DirectoryNotFoundException(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;string&lt;/span&gt;.Format(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;&quot;Deployment target directory not found &amp;#123;0&amp;#125;&quot;&lt;/span&gt;,&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            deploymentPath&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            )&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        );&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// After&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; DirectoryNotFoundException(&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;string&quot;&gt;$&quot;Deployment target directory not found &lt;span class=&quot;subst&quot;&gt;&amp;#123;deploymentPath&amp;#125;&lt;/span&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            )&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        );&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;Thanks for reading.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;I like a lot of features available in C# 6, but my favorite is string interpolation. I think it makes ecstatically pleasing code. It is m
+    
+    </summary>
+    
+    
+      <category term="Open Source" scheme="http://www.phillipsj.net/tags/Open-Source/"/>
+    
+      <category term="Cake" scheme="http://www.phillipsj.net/tags/Cake/"/>
+    
+  </entry>
   
   <entry>
     <title>Cake: Automating an existing project</title>
@@ -101,9 +132,9 @@
     <link href="http://www.phillipsj.net/2016/07/23/Shockingly-Sweet-Electron-and-Cake/"/>
     <id>http://www.phillipsj.net/2016/07/23/Shockingly-Sweet-Electron-and-Cake/</id>
     <published>2016-07-24T02:48:40.000Z</published>
-    <updated>2016-07-24T02:48:40.018Z</updated>
+    <updated>2016-07-27T02:44:41.435Z</updated>
     
-    <content type="html">&lt;p&gt;We have recently started using &lt;a href=&quot;http://electron.atom.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Electron&lt;/a&gt; for an application we have been development. We have enjoyed the experience so much we have decided as a team that all desktop applications going forward will be Electron based. This is great as it keeps the web development skills sharp even when making a desktop application, plus it leverages our knowledge in web technologies and we don’t have to context switch. &lt;/p&gt;
+    <content type="html">&lt;p&gt;We have recently started using &lt;a href=&quot;http://electron.atom.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Electron&lt;/a&gt; for an application we have been developing. We have enjoyed the experience so much we have decided as a team that all desktop applications going forward will be Electron based. This is great as it keeps the web development skills sharp even when making a desktop application, plus it leverages our knowledge in web technologies and we don’t have to context switch. &lt;/p&gt;
 &lt;p&gt;To keep the consistency with all our other projects we decided to use Cake to build our Electron applications. We use &lt;a href=&quot;https://github.com/electron-userland/electron-builder&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;electron-builder&lt;/a&gt; to perform the heavy lifting with a few NPM scripts.  We then execute those NPM scripts using Cake. You can take a look at the complete solution &lt;a href=&quot;https://github.com/phillipsj/shockingly-sweet&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;here&lt;/a&gt;. Below I will walk you through the Cake file.&lt;/p&gt;
 &lt;p&gt;So we start off by getting the &lt;a href=&quot;https://github.com/philo/cake-npm&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Cake.Npm&lt;/a&gt; addin.&lt;/p&gt;
 &lt;figure class=&quot;highlight csharp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#addin Cake.Npm&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -232,9 +263,9 @@
     </summary>
     
     
-      <category term="Open Source" scheme="http://www.phillipsj.net/tags/Open-Source/"/>
-    
       <category term="Linux" scheme="http://www.phillipsj.net/tags/Linux/"/>
+    
+      <category term="Open Source" scheme="http://www.phillipsj.net/tags/Open-Source/"/>
     
   </entry>
   
@@ -633,27 +664,6 @@
       <category term="Agile" scheme="http://www.phillipsj.net/tags/Agile/"/>
     
       <category term="Shipping" scheme="http://www.phillipsj.net/tags/Shipping/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Moving into Management</title>
-    <link href="http://www.phillipsj.net/2015/06/14/Moving-into-Management/"/>
-    <id>http://www.phillipsj.net/2015/06/14/Moving-into-Management/</id>
-    <published>2015-06-15T00:00:00.000Z</published>
-    <updated>2016-05-31T00:24:49.448Z</updated>
-    
-    <content type="html">&lt;p&gt;I have finally made the move into management. As of this week I am now a manager&lt;br&gt;of a small group. I still get to do development, but I get to help my teammates&lt;br&gt;in a different capacity. It is a going to be a rocky ride for me personally and&lt;br&gt;this past week is proof of that. I have tried to move into management in the&lt;br&gt;past, but there was always a HR policy that penalized me because I didn’t have&lt;br&gt;a related degree (local government), however reflecting on that now, I realize&lt;br&gt;that I do not think I was really ready. Funny how a few more years of expereince&lt;br&gt;changes everything. I do find that along with trying to meet the needs of my&lt;br&gt;teammates, I am having to step up and be a product manager. We are an “agile”&lt;br&gt;team and we have a product owner, but I am finding that a product manager is&lt;br&gt;very different from a product owner. We need someone to create a product&lt;br&gt;roadmap and focus on what is going to both challenge the team and drive the&lt;br&gt;product forward. Also as a manager strategy is at a totally different level or&lt;br&gt;maybe it is just me feeling that it is different. Hopefully, I will be able to&lt;br&gt;start finding time to keep in a regular blogging rythm. I have lots of thoughts&lt;br&gt;I want to share.&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;I have finally made the move into management. As of this week I am now a manager&lt;br&gt;of a small group. I still get to do development, but 
-    
-    </summary>
-    
-    
-      <category term="Management" scheme="http://www.phillipsj.net/tags/Management/"/>
     
   </entry>
   
