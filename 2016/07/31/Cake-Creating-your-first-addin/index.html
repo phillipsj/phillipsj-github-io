@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="A blog about software development and other random musings.">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Jamie Phillips">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Cake: Creating your first addin"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="A blog about software development and other random musings." />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Jamie Phillips"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary" />
+    
+        <meta name="twitter:site" content="phillipsj73>" />
+    
+
+    <!-- Title -->
+    
+    <title>Cake: Creating your first addin - Jamie Phillips</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-56743201-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Jamie Phillips</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/About">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/Presentations">
+                            
+                                Presentations
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/phillipsj">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.phillipsj.net/img/banner.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Cake: Creating your first addin</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        2016-07-31
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/Open-Source/">#Open Source</a> <a href="/tags/Cake/">#Cake</a> <a href="/tags/Tutorials/">#Tutorials</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>In this tutorial, I will be walking you through the basics of creating a Cake Addin. There are going to be assumptions that you know how to create a project using Visual Studio or your tool oc choice. It also assumes you know how to use NuGet to install packages in your project.  Let’s get started, we are going to create a really simple addin that gives you the ability to upload a file to an FTP site.</p>
+<h2 id="Step-1-Setup"><a href="#Step-1-Setup" class="headerlink" title="Step 1: Setup"></a>Step 1: Setup</h2><p>Create a new <em>class library</em> project in Visual Studio named <em>Cake.Ftp</em> and delete the Class1.cs file that is automatically created. Your library doesn’t have to follow this naming convention, but this is the community standard that is the most prevalent. The first item you will need is the <em>Cake.Core</em> Nuget package, so please install that into your <em>Cake.Ftp</em> project. Now that is handled you are going to need to create two files. One of those files will be the primary file that holds your logic and the other file will be your Cake aliases.</p>
+<h3 id="An-important-note"><a href="#An-important-note" class="headerlink" title="An important note:"></a>An important note:</h3><p>Cake aliases are convenience methods that make your functionality available from your Cake file. Without the alias, the convenience of just calling your method in the Cake file will not be there and you will have to perform other steps. So remember to always create aliases for your addins. To read more about aliases see the documentation <a href="http://cakebuild.net/docs/fundamentals/aliases" target="_blank" rel="external">here</a>.</p>
+<p>The first file that needs created is <em>FtpClient.cs</em>, this will house the primary logic of our FTP addin. After that file has been created go ahead and create the <em>FtpAliases.cs</em> class which will house our aliases.</p>
+<h2 id="Step-2-Code"><a href="#Step-2-Code" class="headerlink" title="Step 2: Code"></a>Step 2: Code</h2><p>Now lets start building our our <em>FtpClient</em>. We are just going to have the basic functionality of uploading a file to an FTP server to start.  So lets create our constructor.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Cake.Ftp</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">FtpClient</span> &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">FtpClient</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>That looks pretty standard and doesn’t appear to be anything new that you wouldn’t expect. To upload a file we are going to need access to the file system, we need to know about the Cake environment, and I would like to perform some logging. Luckily, Cake provides some interfaces for use that provide us with access to these environments. Additionally, this will allow for unit testing if we so choose. Cake uses one of my favorite dependency injection frameworks, <a href="https://autofac.org/" target="_blank" rel="external">Autofac</a> for dependency injection, so all you need to do is put these in your constructor and Cake handles the rest.  </p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> Cake.Core;</span><br><span class="line"><span class="keyword">using</span> Cake.Core.Diagnostics;</span><br><span class="line"><span class="keyword">using</span> Cake.Core.IO;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Cake.Ftp</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">FtpClient</span> &#123;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">readonly</span> IFileSystem _fileSystem;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">readonly</span> ICakeEnvironment _environment;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">readonly</span> ICakeLog _log;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">readonly</span> StringComparison _comparison;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">FtpClient</span>(<span class="params">IFileSystem fileSystem, ICakeEnvironment environment, ICakeLog log</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (fileSystem == <span class="literal">null</span>) &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="keyword">nameof</span>(fileSystem));</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (environment == <span class="literal">null</span>) &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="keyword">nameof</span>(environment));</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (log == <span class="literal">null</span>) &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="keyword">nameof</span>(log));</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            _fileSystem = fileSystem;</span><br><span class="line">            _environment = environment;</span><br><span class="line">            _log = log;</span><br><span class="line">            _comparison = environment.Platform.IsUnix() ? StringComparison.Ordinal : StringComparison.OrdinalIgnoreCase;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Of course as you see above it is a good practice that if any of these items that you need to create your class are not available to throw an error. You may have noticed by now that we have a <em>StringComparison</em> class being created in the constructor, the purpose of this is to make sure we compare strings correctly regardless of operating system.</p>
+<p>Now with all the basic stuff out of the way lets start creating our file upload method. We are going to create our initial definition for our method. We need the FTP location, the file that we need to upload, the username, and the password we want to use. Then we are going to make sure that none of our required parameters are null, finally we check to make sure that we are actually passed an FTP URI.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">UploadFile</span>(<span class="params">Uri serverUri, FilePath fileToUpload, <span class="keyword">string</span> username, <span class="keyword">string</span> password</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (serverUri == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="keyword">nameof</span>(serverUri), <span class="string">"Server URI is null."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (fileToUpload == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="keyword">nameof</span>(fileToUpload), <span class="string">"File to upload is null."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">string</span>.IsNullOrWhiteSpace(username)) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="keyword">nameof</span>(username), <span class="string">"Username is null."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">string</span>.IsNullOrWhiteSpace(password)) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="keyword">nameof</span>(password), <span class="string">"Password is null."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (serverUri.Scheme != Uri.UriSchemeFtp) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> ArgumentOutOfRangeException(<span class="string">"Server URI scheme is not FTP."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>With all the plumbing out of the way, we are going to create our FTP Request, create our credentials, grab our file, and upload it. While we are doing that we are going to add some verbose logging and some informational logging to help debug if there are any issues. </p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.IO;</span><br><span class="line"><span class="keyword">using</span> System.Net;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> Cake.Core;</span><br><span class="line"><span class="keyword">using</span> Cake.Core.Diagnostics;</span><br><span class="line"><span class="keyword">using</span> Cake.Core.IO;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Constructor and namespace.</span></span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">UploadFile</span>(<span class="params">Uri serverUri, FilePath fileToUpload, <span class="keyword">string</span> username, <span class="keyword">string</span> password</span>) </span>&#123;</span><br><span class="line">     <span class="keyword">if</span> (serverUri == <span class="literal">null</span>) &#123;</span><br><span class="line">         <span class="keyword">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="keyword">nameof</span>(serverUri), <span class="string">"Server URI is null."</span>);</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">if</span> (fileToUpload == <span class="literal">null</span>) &#123;</span><br><span class="line">         <span class="keyword">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="keyword">nameof</span>(fileToUpload), <span class="string">"File to upload is null."</span>);</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">if</span> (<span class="keyword">string</span>.IsNullOrWhiteSpace(username)) &#123;</span><br><span class="line">         <span class="keyword">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="keyword">nameof</span>(username), <span class="string">"Username is null."</span>);</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">if</span> (<span class="keyword">string</span>.IsNullOrWhiteSpace(password)) &#123;</span><br><span class="line">         <span class="keyword">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="keyword">nameof</span>(password), <span class="string">"Password is null."</span>);</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">if</span> (serverUri.Scheme != Uri.UriSchemeFtp) &#123;</span><br><span class="line">         <span class="keyword">throw</span> <span class="keyword">new</span> ArgumentOutOfRangeException(<span class="string">"Server URI scheme is not FTP."</span>);</span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">     <span class="comment">// Adding verbose logging for the URI being used.</span></span><br><span class="line">     _log.Verbose(<span class="string">"Uploading file to &#123;0&#125;"</span>, serverUri);</span><br><span class="line"></span><br><span class="line">     <span class="comment">// Creating the request</span></span><br><span class="line">     <span class="keyword">var</span> request = (FtpWebRequest) WebRequest.Create(serverUri);</span><br><span class="line">     request.Method = WebRequestMethods.Ftp.UploadFile;</span><br><span class="line"></span><br><span class="line">     <span class="comment">// Adding verbose logging for credentials used.</span></span><br><span class="line">     _log.Verbose(<span class="string">"Using the following credentials &#123;0&#125;, &#123;1&#125;"</span>, username, password);</span><br><span class="line">     request.Credentials = <span class="keyword">new</span> NetworkCredential(username, password);</span><br><span class="line"></span><br><span class="line">     <span class="comment">// Using the abstracted filesystem to get the file.</span></span><br><span class="line">     <span class="keyword">var</span> uploadFile = _fileSystem.GetFile(fileToUpload);</span><br><span class="line">           </span><br><span class="line">     <span class="keyword">using</span> (<span class="keyword">var</span> streamReader = <span class="keyword">new</span> StreamReader(uploadFile.OpenRead()))&#123;</span><br><span class="line">         <span class="comment">// Get the file contents.</span></span><br><span class="line">         <span class="keyword">var</span> fileContents = Encoding.UTF8.GetBytes(streamReader.ReadToEnd());</span><br><span class="line">         request.ContentLength = fileContents.Length;</span><br><span class="line"></span><br><span class="line">         <span class="comment">// Writing the file to the request stream.</span></span><br><span class="line">         <span class="keyword">var</span> requestStream = request.GetRequestStream();</span><br><span class="line">         requestStream.Write(fileContents, <span class="number">0</span>, fileContents.Length);</span><br><span class="line">         requestStream.Close();</span><br><span class="line"></span><br><span class="line">         <span class="comment">// Getting the response from the FTP server.</span></span><br><span class="line">         <span class="keyword">var</span> response = (FtpWebResponse) request.GetResponse();</span><br><span class="line"></span><br><span class="line">         <span class="comment">// Logging if it completed and the description of the status returned.</span></span><br><span class="line">         _log.Information(<span class="string">"File upload complete, status &#123;0&#125;"</span>, response.StatusDescription);</span><br><span class="line">         response.Close();</span><br><span class="line">    &#125;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="Step-3-Cake-Aliases"><a href="#Step-3-Cake-Aliases" class="headerlink" title="Step 3: Cake Aliases"></a>Step 3: Cake Aliases</h2><p>Now the only piece that is left is to create your Cake aliases. If your <em>FtpAliases</em> file, create the following, static method. The only parameter that you don’t use in your <em>FtpClient</em> is the ICakeContext and if you notice this just basically an extension method to the Cake context. Make sure to annotate the extension method with the <em>CakeMethodAlias</em> attribute so it is make visible in the cake file. I like to add <em>CakeAliasCategory</em> attributes, but it isn’t necessary.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> Cake.Core;</span><br><span class="line"><span class="keyword">using</span> Cake.Core.Annotations;</span><br><span class="line"><span class="keyword">using</span> Cake.Core.IO;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Cake.Ftp</span> &#123;</span><br><span class="line">    [CakeAliasCategory(<span class="string">"FTP"</span>)]</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title">FtpAliases</span> &#123;</span><br><span class="line">        [CakeMethodAlias]</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">FtpUploadFile</span>(<span class="params"><span class="keyword">this</span> ICakeContext context, Uri serverUri, FilePath fileToUpload, </span><br><span class="line">            <span class="keyword">string</span> username, <span class="keyword">string</span> password</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (context == <span class="literal">null</span>) &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="keyword">nameof</span>(context));</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">var</span> ftpClient = <span class="keyword">new</span> FtpClient(context.FileSystem, context.Environment, context.Log);</span><br><span class="line">            ftpClient.UploadFile(serverUri, fileToUpload, username, password);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>At this point, you would be finished creating your first addin, however, a nice touch would be to document your method using XML comments amd provide a code example, another Cake project and community standard. With these added, if your addin is added to the Cake website, the documentation on the site will automagically be available.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> Cake.Core;</span><br><span class="line"><span class="keyword">using</span> Cake.Core.Annotations;</span><br><span class="line"><span class="keyword">using</span> Cake.Core.IO;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Cake.Ftp</span> &#123;</span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> Contains functionality for working with FTP</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    [CakeAliasCategory(<span class="string">"FTP"</span>)]</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title">FtpAliases</span> &#123;</span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> Uploads the file to the FTP server using the supplied credentials.</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;example&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;code&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> Task("UploadFile")</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span>   .Does(() =&gt; &#123;</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span>     var fileToUpload = File("some.txt");</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span>     FtpUploadFile("ftp://myserver/random/test.htm", fileToUpload, "some-user", "some-password");</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> &#125;);</span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/code&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/example&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="context"&gt;</span>The context.<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="serverUri"&gt;</span>FTP URI requring FTP:// scehma.<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="fileToUpload"&gt;</span>The file to be uploaded.<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="username"&gt;</span>Username of the FTP account.<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="password"&gt;</span>Password of the FTP account.<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line">        [CakeMethodAlias]</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">FtpUploadFile</span>(<span class="params"><span class="keyword">this</span> ICakeContext context, Uri serverUri, FilePath fileToUpload, </span><br><span class="line">            <span class="keyword">string</span> username, <span class="keyword">string</span> password</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (context == <span class="literal">null</span>) &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> ArgumentNullException(<span class="keyword">nameof</span>(context));</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">var</span> ftpClient = <span class="keyword">new</span> FtpClient(context.FileSystem, context.Environment, context.Log);</span><br><span class="line">            ftpClient.UploadFile(serverUri, fileToUpload, username, password);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="The-finish-line"><a href="#The-finish-line" class="headerlink" title="The finish line"></a>The finish line</h1><p>There you go, a basic tutorial on creating a Cake addin. I hope to publish a follow up tutorial shortly on how to perform unit testing of a Cake addin. If you are finding these useful or have any suggestions or ideas on what I should do next, please let me know on Twitter <a href="https://twitter.com/phillipsj73" target="_blank" rel="external">@phillipsj73</a>.</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                        <li>
+                            <a href="https://twitter.com/phillipsj73" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/phillipsj" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                        <li>
+                            <a href="https://www.linkedin.com/in/jamie-phillips-695927b0" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; Copyright 2016, Jamie Phillips. Powered by <a target="_blank" href="https://hexo.io/">Hexo</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+
+</html>
