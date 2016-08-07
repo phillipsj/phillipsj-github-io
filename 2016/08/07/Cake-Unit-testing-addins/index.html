@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="A blog about software development and other random musings.">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Jamie Phillips">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Cake: Unit testing addins"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="A blog about software development and other random musings." />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Jamie Phillips"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary" />
+    
+        <meta name="twitter:site" content="phillipsj73>" />
+    
+
+    <!-- Title -->
+    
+    <title>Cake: Unit testing addins - Jamie Phillips</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-56743201-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Jamie Phillips</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/About">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/Presentations">
+                            
+                                Presentations
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/phillipsj">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.phillipsj.net/img/banner.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Cake: Unit testing addins</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        2016-08-07
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/Open-Source/">#Open Source</a> <a href="/tags/Cake/">#Cake</a> <a href="/tags/Tutorials/">#Tutorials</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>I am back with another confession to make, my <a href="">Cake.XdtTransform</a> project does not have any unit testing. So I decided this is a great opportunity to create a tutorial for unit testing a Cake addin.</p>
+<p>&lt;%- toc(page.content) %&gt;</p>
+<h2 id="Step-1-Create-unit-test-project"><a href="#Step-1-Create-unit-test-project" class="headerlink" title="Step 1: Create unit test project"></a>Step 1: Create unit test project</h2><p>Create a new <em>class library</em> project named <em>Cake.XdtTransform.Tests</em>, as part of our Cake.XdtTransform solution, and delete the Class1.cs file that is automatically created. The first item you will need is the <em>Cake.Testing</em> Nuget package, so please install that into your <em>Cake.XdtTransform.Tests</em> project. <em>Cake.Testing</em> provides a nice set of fakes, fixtures, and extensions that can help with unit testing. At this point, you can pick your favorite unit testing frameworky, in this example we will create our unit tests using <em>Fixie</em> and <em>Should</em> for assertions, the Cake project uses <em>Xunit2</em>. There are lots of examples in the source code. Start by creating a class called <em>XdtTransformationTests.cs</em>. </p>
+<h2 id="Step-2-Code"><a href="#Step-2-Code" class="headerlink" title="Step 2: Code"></a>Step 2: Code</h2><p>Lets start writing our unit tests. We are going to follow a few other conventions from the Cake source code as I find it helpful. In your <em>XdtTransformationTests.cs</em> class. Let’s create the initial class and the basic items needed.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Cake.XdtTransform.Tests</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">XdtTransformationTests</span> &#123;</span><br><span class="line">       </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>As you see we have created a class for the tests which is all that is really needed with Fixie. Before we can start testing we will create a fixture for our <em>XdtTransform</em> class. This is another convention that is prevalent throughout the Cake source code that I find useful. So create a folder in our <em>Cake.XdtTransform.Tests</em> project called <em>Fixtures</em>, and then create a class in that folder called <em>XdtTransformationFixture.cs</em>. Here is the basic structure of that class.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Cake.XdtTransform.Tests.Fixtures</span> &#123;</span><br><span class="line">    <span class="keyword">internal</span> <span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">XdtTransformationFixture</span> &#123;</span><br><span class="line">       </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">XdtTransformationFixture</span>(<span class="params"></span>) </span>&#123; </span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Now that we have the basic structure of the fixture we are going to go through several steps to get it setup for using in our tests. In Cake, these fixtures wrap the class you are testing and performs all the necessary setup. This is also the class that will use several of the fakes that are included in the <em>Cake.Testing</em> Nuget package. So lets start off by create our constructor.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Cake.XdtTransform.Tests.Fixtures</span> &#123;</span><br><span class="line">    <span class="keyword">internal</span> <span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">XdtTransformationFixture</span> &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">XdtTransformationFixture</span>(<span class="params"><span class="keyword">bool</span> sourceFileExists = <span class="literal">true</span>, <span class="keyword">bool</span> transformFileExists = <span class="literal">true</span>, <span class="keyword">bool</span> targetFileExists = <span class="literal">false</span></span>) </span>&#123;</span><br><span class="line">           </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>In this constructor we are going to be passing booleans to toggle if a file is needed. This way we can easily write unit tests that validate that we passed a valid file to our methods. Inside the constructor we need to setup the cake environment, the file system, and make sure our source and transform files exist.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">using</span> Cake.Core.IO;</span><br><span class="line"><span class="keyword">using</span> Cake.Testing;</span><br><span class="line"><span class="keyword">using</span> Cake.XdtTransform.Tests.Properties;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Cake.XdtTransform.Tests.Fixtures</span> &#123;</span><br><span class="line">    <span class="keyword">internal</span> <span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">XdtTransformationFixture</span> &#123;</span><br><span class="line">        <span class="keyword">public</span> IFileSystem FileSystem &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="keyword">public</span> FilePath SourceFile &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="keyword">public</span> FilePath TransformFile &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="keyword">public</span> FilePath TargetFile &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">XdtTransformationFixture</span>(<span class="params"><span class="keyword">bool</span> sourceFileExists = <span class="literal">true</span>, <span class="keyword">bool</span> transformFileExists = <span class="literal">true</span>, <span class="keyword">bool</span> targetFileExists = <span class="literal">false</span></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> environment = FakeEnvironment.CreateUnixEnvironment();</span><br><span class="line">            <span class="keyword">var</span> fileSystem = <span class="keyword">new</span> FakeFileSystem(environment);</span><br><span class="line">            fileSystem.CreateDirectory(<span class="string">"/Working"</span>);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (sourceFileExists) &#123;</span><br><span class="line">                <span class="keyword">var</span> sourceFile = fileSystem.CreateFile(<span class="string">"/Working/web.config"</span>).SetContent(Resources.XdtTransformation_SourceFile);</span><br><span class="line">                SourceFile = sourceFile.Path;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (transformFileExists) &#123;</span><br><span class="line">                <span class="keyword">var</span> transformFile = fileSystem.CreateFile(<span class="string">"/Working/web.release.config"</span>).SetContent(Resources.XdtTramsformation_TransformFile);</span><br><span class="line">                TransformFile = transformFile.Path;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (targetFileExists) &#123;</span><br><span class="line">                <span class="keyword">var</span> targetFile = fileSystem.CreateFile(<span class="string">"/Working/transformed.config"</span>).SetContent(Resources.XdtTransformation_TargetFile);</span><br><span class="line">                TargetFile = targetFile.Path;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                TargetFile = <span class="string">"/Working/transformed.config"</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            FileSystem = fileSystem;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>So lets walk through the code that is above. The first thing we do is use the <em>FakeEnvrionment</em> to create a <em>CakeEnvironment</em> for unix. Then we use that environment to create a <em>FakeFileSystem</em>. We then create a directory in our fake file system. After that we just make sure that we create any necessary files that we need to exist in that fake directory. You will also notice that we are using a few resources. Those files are real contents of the files that are represented just stored as resources in the project.</p>
+<p>Now lets implement the method we will be testing using our fixture, the TransformConfig method. This method just wraps the XdtTransformation.TransformConfig method, but provides all the necessary environment configuration for it.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">using</span> Cake.Core.IO;</span><br><span class="line"><span class="keyword">using</span> Cake.Testing;</span><br><span class="line"><span class="keyword">using</span> Cake.XdtTransform.Tests.Properties;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Cake.XdtTransform.Tests.Fixtures</span> &#123;</span><br><span class="line">    <span class="keyword">internal</span> <span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">XdtTransformationFixture</span> &#123;</span><br><span class="line">        <span class="keyword">public</span> IFileSystem FileSystem &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="keyword">public</span> FilePath SourceFile &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="keyword">public</span> FilePath TransformFile &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">        <span class="keyword">public</span> FilePath TargetFile &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">XdtTransformationFixture</span>(<span class="params"><span class="keyword">bool</span> sourceFileExists = <span class="literal">true</span>, <span class="keyword">bool</span> transformFileExists = <span class="literal">true</span>, <span class="keyword">bool</span> targetFileExists = <span class="literal">false</span></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> environment = FakeEnvironment.CreateUnixEnvironment();</span><br><span class="line">            <span class="keyword">var</span> fileSystem = <span class="keyword">new</span> FakeFileSystem(environment);</span><br><span class="line">            fileSystem.CreateDirectory(<span class="string">"/Working"</span>);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (sourceFileExists) &#123;</span><br><span class="line">                <span class="keyword">var</span> sourceFile = fileSystem.CreateFile(<span class="string">"/Working/web.config"</span>).SetContent(Resources.XdtTransformation_SourceFile);</span><br><span class="line">                SourceFile = sourceFile.Path;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (transformFileExists) &#123;</span><br><span class="line">                <span class="keyword">var</span> transformFile = fileSystem.CreateFile(<span class="string">"/Working/web.release.config"</span>).SetContent(Resources.XdtTramsformation_TransformFile);</span><br><span class="line">                TransformFile = transformFile.Path;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (targetFileExists) &#123;</span><br><span class="line">                <span class="keyword">var</span> targetFile = fileSystem.CreateFile(<span class="string">"/Working/transformed.config"</span>).SetContent(Resources.XdtTransformation_TargetFile);</span><br><span class="line">                TargetFile = targetFile.Path;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                TargetFile = <span class="string">"/Working/transformed.config"</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            FileSystem = fileSystem;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">TransformConfig</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            XdtTransformation.TransformConfig(FileSystem, SourceFile, TransformFile, TargetFile);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Now we can get back to writing our unit tests. In our XdtTransformationTests class we need to test that we generate the correct errors when passing invalid data and we need to make sure that the XDT transformation correctly works. Lets go ahead and stub out all of these methods.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.IO;</span><br><span class="line"><span class="keyword">using</span> System.Text;</span><br><span class="line"><span class="keyword">using</span> Cake.Core.IO;</span><br><span class="line"><span class="keyword">using</span> Cake.XdtTransform.Tests.Fixtures;</span><br><span class="line"><span class="keyword">using</span> Should;</span><br><span class="line"><span class="keyword">using</span> Should.Core.Assertions;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Cake.XdtTransform.Tests</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">sealed</span> <span class="keyword">class</span> <span class="title">XdtTransformationTests</span> &#123;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ShouldErrorIfSourceFileIsNull</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">           </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ShouldErrorIfTransformFileIsNull</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">           </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ShouldErrorIfTargetFileIsNull</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ShouldErrorIfSourceFileNotExists</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">           </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ShouldErrorIfTransformFileNotExists</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">           </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ShouldTransformFile</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">           </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="Checking-for-null-arguments"><a href="#Checking-for-null-arguments" class="headerlink" title="Checking for null arguments"></a>Checking for null arguments</h3><p>With these method stubbed out, I am going to use a short hand in all the code examples with just the method name. The first three methods are going to look very similar.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ShouldErrorIfSourceFileIsNull</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Given</span></span><br><span class="line">    <span class="keyword">var</span> fixture = <span class="keyword">new</span> XdtTransformationFixture &#123;SourceFile = <span class="literal">null</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// When</span></span><br><span class="line">    <span class="keyword">var</span> result = Record.Exception(() =&gt; fixture.TransformConfig());</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Then</span></span><br><span class="line">    result.ShouldBeType&lt;ArgumentNullException&gt;().ParamName.ShouldEqual(<span class="string">"sourceFile"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>So we configure our fixture and set it up so the source file is null. We then record the result and assert our expectation. In this case we expect that the <em>sourceFile</em> parameter will throw an ArgumentNullException.</p>
+<p>The next few tests look almost identical.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ShouldErrorIfTransformFileIsNull</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Given</span></span><br><span class="line">    <span class="keyword">var</span> fixture = <span class="keyword">new</span> XdtTransformationFixture &#123;TransformFile = <span class="literal">null</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// When</span></span><br><span class="line">    <span class="keyword">var</span> result = Record.Exception(() =&gt; fixture.TransformConfig());</span><br><span class="line"> </span><br><span class="line">    <span class="comment">// Then</span></span><br><span class="line">    result.ShouldBeType&lt;ArgumentNullException&gt;().ParamName.ShouldEqual(<span class="string">"transformFile"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ShouldErrorIfTargetFileIsNull</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Given</span></span><br><span class="line">    <span class="keyword">var</span> fixture = <span class="keyword">new</span> XdtTransformationFixture &#123;TargetFile = <span class="literal">null</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// When</span></span><br><span class="line">    <span class="keyword">var</span> result = Record.Exception(() =&gt; fixture.TransformConfig());</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Then</span></span><br><span class="line">    result.ShouldBeType&lt;ArgumentNullException&gt;().ParamName.ShouldEqual(<span class="string">"targetFile"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="Checking-if-file-exists"><a href="#Checking-if-file-exists" class="headerlink" title="Checking if file exists"></a>Checking if file exists</h3><p>We are now going to unit test if the file exist and if it doesn’t, make sure we are throwing our FileNotFoundException.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ShouldErrorIfSourceFileNotExists</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Given</span></span><br><span class="line">    <span class="keyword">var</span> fixture = <span class="keyword">new</span> XdtTransformationFixture(sourceFileExists: <span class="literal">false</span>) &#123;</span><br><span class="line">        SourceFile = <span class="string">"/Working/non-existing.config"</span></span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// When</span></span><br><span class="line">    <span class="keyword">var</span> result = Record.Exception(() =&gt; fixture.TransformConfig());</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Then</span></span><br><span class="line">    result.ShouldBeType&lt;FileNotFoundException&gt;().Message.ShouldContain(<span class="string">"Unable to find the specified file."</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ShouldErrorIfTransformFileNotExists</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Given</span></span><br><span class="line">    <span class="keyword">var</span> fixture = <span class="keyword">new</span> XdtTransformationFixture(transformFileExists: <span class="literal">false</span>) &#123;</span><br><span class="line">        TransformFile = <span class="string">"/Working/non-existing-transform.config"</span></span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// When</span></span><br><span class="line">    <span class="keyword">var</span> result = Record.Exception(() =&gt; fixture.TransformConfig());</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Then</span></span><br><span class="line">    result.ShouldBeType&lt;FileNotFoundException&gt;().Message.ShouldContain(<span class="string">"Unable to find the specified file."</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>This doesn’t look too different, other than the initial setup of the fixture. We are telling the fixture that the file does not need to exist and we are creating an invalid file path. Finally we record and assert the exception occurs.</p>
+<h3 id="Checking-the-transform-method"><a href="#Checking-the-transform-method" class="headerlink" title="Checking the transform method"></a>Checking the transform method</h3><p>We are finally ready to test the method.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">ShouldTransformFile</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// Given</span></span><br><span class="line">    <span class="keyword">var</span> fixture = <span class="keyword">new</span> XdtTransformationFixture &#123;</span><br><span class="line">        TargetFile = <span class="string">"/Working/transformed.config"</span></span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// When</span></span><br><span class="line">    fixture.TransformConfig();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Then</span></span><br><span class="line">    <span class="keyword">var</span> transformedFile = fixture.FileSystem.GetFile(fixture.TargetFile);</span><br><span class="line">    transformedFile.Exists.ShouldEqual(<span class="literal">true</span>);</span><br><span class="line">    <span class="keyword">string</span> transformedString;</span><br><span class="line">    <span class="keyword">using</span> (<span class="keyword">var</span> transformedStream = transformedFile.OpenRead()) &#123;</span><br><span class="line">        <span class="keyword">using</span> (<span class="keyword">var</span> streamReader = <span class="keyword">new</span> StreamReader(transformedStream, Encoding.UTF8)) &#123;</span><br><span class="line">            transformedString = streamReader.ReadToEnd();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    transformedString.ShouldContain(<span class="string">"&lt;add key=\"transformed\" value=\"false\"/&gt;"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>We configure the fixture with the name of our target file. We run the transfom and then we grab the generated file from the fake file system, make sure it exists, then we see if it contains the transformed setting.</p>
+<h1 id="The-finish-line"><a href="#The-finish-line" class="headerlink" title="The finish line"></a>The finish line</h1><p>Now that we have unit tests, they are not of much use if we don’t run them. So please refer to my previous <a href="http://www.phillipsj.net/2016/07/24/Cake-Automating-an-existing-project/">post</a> about automating an existing project. Go to step 5 to see how to add Fixie and the task your your Cake file.</p>
+<p>Thanks for reading. </p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                        <li>
+                            <a href="https://twitter.com/phillipsj73" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/phillipsj" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                        <li>
+                            <a href="https://www.linkedin.com/in/jamie-phillips-695927b0" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; Copyright 2016, Jamie Phillips. Powered by <a target="_blank" href="https://hexo.io/">Hexo</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+
+</html>
