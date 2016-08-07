@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.phillipsj.net/"/>
-  <updated>2016-08-07T12:41:18.750Z</updated>
+  <updated>2016-08-07T12:44:22.529Z</updated>
   <id>http://www.phillipsj.net/</id>
   
   <author>
@@ -20,10 +20,9 @@
     <link href="http://www.phillipsj.net/2016/08/07/Cake-Unit-testing-addins/"/>
     <id>http://www.phillipsj.net/2016/08/07/Cake-Unit-testing-addins/</id>
     <published>2016-08-07T12:41:18.000Z</published>
-    <updated>2016-08-07T12:41:18.750Z</updated>
+    <updated>2016-08-07T12:44:22.529Z</updated>
     
     <content type="html">&lt;p&gt;I am back with another confession to make, my &lt;a href=&quot;&quot;&gt;Cake.XdtTransform&lt;/a&gt; project does not have any unit testing. So I decided this is a great opportunity to create a tutorial for unit testing a Cake addin.&lt;/p&gt;
-&lt;p&gt;&amp;lt;%- toc(page.content) %&amp;gt;&lt;/p&gt;
 &lt;h2 id=&quot;Step-1-Create-unit-test-project&quot;&gt;&lt;a href=&quot;#Step-1-Create-unit-test-project&quot; class=&quot;headerlink&quot; title=&quot;Step 1: Create unit test project&quot;&gt;&lt;/a&gt;Step 1: Create unit test project&lt;/h2&gt;&lt;p&gt;Create a new &lt;em&gt;class library&lt;/em&gt; project named &lt;em&gt;Cake.XdtTransform.Tests&lt;/em&gt;, as part of our Cake.XdtTransform solution, and delete the Class1.cs file that is automatically created. The first item you will need is the &lt;em&gt;Cake.Testing&lt;/em&gt; Nuget package, so please install that into your &lt;em&gt;Cake.XdtTransform.Tests&lt;/em&gt; project. &lt;em&gt;Cake.Testing&lt;/em&gt; provides a nice set of fakes, fixtures, and extensions that can help with unit testing. At this point, you can pick your favorite unit testing frameworky, in this example we will create our unit tests using &lt;em&gt;Fixie&lt;/em&gt; and &lt;em&gt;Should&lt;/em&gt; for assertions, the Cake project uses &lt;em&gt;Xunit2&lt;/em&gt;. There are lots of examples in the source code. Start by creating a class called &lt;em&gt;XdtTransformationTests.cs&lt;/em&gt;. &lt;/p&gt;
 &lt;h2 id=&quot;Step-2-Code&quot;&gt;&lt;a href=&quot;#Step-2-Code&quot; class=&quot;headerlink&quot; title=&quot;Step 2: Code&quot;&gt;&lt;/a&gt;Step 2: Code&lt;/h2&gt;&lt;p&gt;Lets start writing our unit tests. We are going to follow a few other conventions from the Cake source code as I find it helpful. In your &lt;em&gt;XdtTransformationTests.cs&lt;/em&gt; class. Let’s create the initial class and the basic items needed.&lt;/p&gt;
 &lt;figure class=&quot;highlight csharp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Cake.XdtTransform.Tests&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;sealed&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;XdtTransformationTests&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
