@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Description-->
+    
+        <meta name="description" content="A blog about software development and other random musings.">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Jamie Phillips">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Extending the Orchard Message Service"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="A blog about software development and other random musings." />
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Jamie Phillips"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article" />
+    
+
+    <!--Page Cover-->
+    
+
+        <meta name="twitter:card" content="summary" />
+    
+        <meta name="twitter:site" content="phillipsj73>" />
+    
+
+    <!-- Title -->
+    
+    <title>Extending the Orchard Message Service - Jamie Phillips</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-56743201-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Jamie Phillips</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/About">
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/Presentations">
+                            
+                                Presentations
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/phillipsj">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.phillipsj.net/img/banner.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Extending the Orchard Message Service</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        2016-08-25
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/Open-Source/">#Open Source</a> <a href="/tags/Orchard/">#Orchard</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>This journey begin in a somewhat normal way. I needed to allow a user in our Orchard instance to submit a form that would send an email to our ticketing system. I know, no API exists for the ticketing system and I had to use an old school way. After getting the initial implementation, we discovered that the email that was being sent was HTML and that HTML was supported, but a bug fix required emails to be in plain text.  Not only that, but the information that gets parsed has to be the first content in the email. I was hit by a double whammy, my email was HTML and the template that was getting applied to the email was our theme template. So couple different items came out of this.</p>
+<ul>
+<li>Templates in your theme override templates in your module.</li>
+<li>The Message Service uses the EmailMessageChannel.</li>
+<li>The EmailMessageChannel uses a specific template.</li>
+<li>The EmailMessageChannel detects if the message contains HTML and sets it on the MailMessage.</li>
+</ul>
+<p>These are good items to know, time to dig into the source code and determine what I needed to do to use my template or send an email as plain text. After a little digging around, I determined that I needed to create two classes, two interfaces, and two templates in my module. The first item I needed to create was an implementation of <em>IMessageChannel</em> for my new type of message channel.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">using</span> Orchard.Messaging.Services;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Orchard.MyCustomModule.Services</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">interface</span> <span class="title">IPlainTextMessageChannel</span> : <span class="title">IMessageChannel</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>With that created I need to create a concrete example of the message channel. I just copied the <em>EmailMessageChannel</em> found in the <em>Orchard.Email</em> module. I renamed the class <em>PlainTextMessageChannel</em> and implemented the interface. I then changed the message type to be <em>PlainText</em>, changed the default template to be <em>Template_PlainText_Wrapper</em>. Finally I set the <em>IsBodyHtml</em> to false as I wanted it to be plain text, not HTML.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">namespace Orchard.MyCustomModule.Services &#123;</span><br><span class="line">    public class PlainTextMessageChannel : Component, IPlainTextMessageChannel, IDisposable &#123;</span><br><span class="line">        private readonly SmtpSettingsPart _smtpSettings;</span><br><span class="line">        private readonly IShapeFactory _shapeFactory;</span><br><span class="line">        private readonly IShapeDisplay _shapeDisplay;</span><br><span class="line">        private readonly Lazy&lt;SmtpClient&gt; _smtpClientField;</span><br><span class="line">        public static readonly string MessageType = "PlainText";</span><br><span class="line">    </span><br><span class="line">        public PlainTextMessageChannel(</span><br><span class="line">            IOrchardServices orchardServices,</span><br><span class="line">            IShapeFactory shapeFactory,</span><br><span class="line">            IShapeDisplay shapeDisplay) &#123;</span><br><span class="line">            _shapeFactory = shapeFactory;</span><br><span class="line">            _shapeDisplay = shapeDisplay;</span><br><span class="line">            _smtpSettings = orchardServices.WorkContext.CurrentSite.As&lt;SmtpSettingsPart&gt;();</span><br><span class="line">            _smtpClientField = new Lazy&lt;SmtpClient&gt;(CreateSmtpClient);</span><br><span class="line">        &#125;</span><br><span class="line">         </span><br><span class="line">        public void Dispose() &#123;</span><br><span class="line">            if (!_smtpClientField.IsValueCreated) &#123;</span><br><span class="line">                return;</span><br><span class="line">            &#125;</span><br><span class="line">             </span><br><span class="line">            _smtpClientField.Value.Dispose();</span><br><span class="line">        &#125;</span><br><span class="line">              </span><br><span class="line">        public void Process(IDictionary&lt;string, object&gt; parameters) &#123;</span><br><span class="line">            </span><br><span class="line">            if (!_smtpSettings.IsValid()) &#123;</span><br><span class="line">                return;</span><br><span class="line">            &#125;</span><br><span class="line">               </span><br><span class="line">            var emailMessage = new EmailMessage &#123;</span><br><span class="line">                Body = Read(parameters, "Body"),</span><br><span class="line">                Subject = Read(parameters, "Subject"),</span><br><span class="line">                Recipients = Read(parameters, "Recipients"),</span><br><span class="line">                ReplyTo = Read(parameters, "ReplyTo"),</span><br><span class="line">                From = Read(parameters, "From"),</span><br><span class="line">                Bcc = Read(parameters, "Bcc"),</span><br><span class="line">                Cc = Read(parameters, "CC")</span><br><span class="line">            &#125;;</span><br><span class="line">                    </span><br><span class="line">            if (emailMessage.Recipients.Length == 0) &#123;</span><br><span class="line">                Logger.Error("Plain text email message doesn't have any recipient");</span><br><span class="line">                return;</span><br><span class="line">            &#125;</span><br><span class="line">                 </span><br><span class="line">            // Apply default Body alteration for PlainText Channel.</span><br><span class="line">            var template = _shapeFactory.Create("Template_PlainText_Wrapper", Arguments.From(new &#123;</span><br><span class="line">                Content = new MvcHtmlString(emailMessage.Body)</span><br><span class="line">            &#125;));</span><br><span class="line">    </span><br><span class="line">            var mailMessage = new MailMessage &#123;</span><br><span class="line">                Subject = emailMessage.Subject,</span><br><span class="line">                Body = _shapeDisplay.Display(template),</span><br><span class="line">                IsBodyHtml = false</span><br><span class="line">            &#125;;</span><br><span class="line">    </span><br><span class="line">            if (parameters.ContainsKey("Message")) &#123;</span><br><span class="line">                // A full message object is provided by the sender.</span><br><span class="line">    </span><br><span class="line">                var oldMessage = mailMessage;</span><br><span class="line">                mailMessage = (MailMessage)parameters["Message"];</span><br><span class="line">    </span><br><span class="line">                if (String.IsNullOrWhiteSpace(mailMessage.Subject))</span><br><span class="line">                    mailMessage.Subject = oldMessage.Subject;</span><br><span class="line">    </span><br><span class="line">                if (String.IsNullOrWhiteSpace(mailMessage.Body)) &#123;</span><br><span class="line">                    mailMessage.Body = oldMessage.Body;</span><br><span class="line">                    mailMessage.IsBodyHtml = oldMessage.IsBodyHtml;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">    </span><br><span class="line">            try &#123;</span><br><span class="line">                foreach (var recipient in ParseRecipients(emailMessage.Recipients)) &#123;</span><br><span class="line">                    mailMessage.To.Add(new MailAddress(recipient));</span><br><span class="line">                &#125;</span><br><span class="line">                if (!String.IsNullOrWhiteSpace(emailMessage.Cc)) &#123;</span><br><span class="line">                    foreach (var recipient in ParseRecipients(emailMessage.Cc)) &#123;</span><br><span class="line">                        mailMessage.CC.Add(new MailAddress(recipient));</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                if (!String.IsNullOrWhiteSpace(emailMessage.Bcc)) &#123;</span><br><span class="line">                    foreach (var recipient in ParseRecipients(emailMessage.Bcc)) &#123;</span><br><span class="line">                        mailMessage.Bcc.Add(new MailAddress(recipient));</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                if (!String.IsNullOrWhiteSpace(emailMessage.From)) &#123;</span><br><span class="line">                    mailMessage.From = new MailAddress(emailMessage.From);</span><br><span class="line">                &#125;</span><br><span class="line">                else &#123;</span><br><span class="line">                    // Take 'From' address from site settings or web.config.</span><br><span class="line">                    mailMessage.From = !String.IsNullOrWhiteSpace(_smtpSettings.Address)</span><br><span class="line">                        ? new MailAddress(_smtpSettings.Address)</span><br><span class="line">                        : new MailAddress(((SmtpSection)ConfigurationManager.GetSection("system.net/mailSettings/smtp")).From);</span><br><span class="line">                &#125;</span><br><span class="line">                if (!String.IsNullOrWhiteSpace(emailMessage.ReplyTo)) &#123;</span><br><span class="line">                    foreach (var recipient in ParseRecipients(emailMessage.ReplyTo)) &#123;</span><br><span class="line">                        mailMessage.ReplyToList.Add(new MailAddress(recipient));</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                _smtpClientField.Value.Send(mailMessage);</span><br><span class="line">            &#125;</span><br><span class="line">            catch (Exception e) &#123;</span><br><span class="line">                Logger.Error(e, "Could not send plain text email");</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">        private SmtpClient CreateSmtpClient() &#123;</span><br><span class="line">            // If no properties are set in the dashboard, use the web.config value.</span><br><span class="line">            if (String.IsNullOrWhiteSpace(_smtpSettings.Host)) &#123;</span><br><span class="line">                return new SmtpClient(); </span><br><span class="line">            &#125;</span><br><span class="line">            var smtpClient = new SmtpClient &#123;</span><br><span class="line">                UseDefaultCredentials = _smtpSettings.RequireCredentials &amp;&amp; _smtpSettings.UseDefaultCredentials</span><br><span class="line">            &#125;;</span><br><span class="line">            if (!smtpClient.UseDefaultCredentials &amp;&amp; !String.IsNullOrWhiteSpace(_smtpSettings.UserName)) &#123;</span><br><span class="line">                smtpClient.Credentials = new NetworkCredential(_smtpSettings.UserName, _smtpSettings.Password);</span><br><span class="line">            &#125;</span><br><span class="line">            if (_smtpSettings.Host != null) &#123;</span><br><span class="line">                smtpClient.Host = _smtpSettings.Host;</span><br><span class="line">            &#125;</span><br><span class="line">            smtpClient.Port = _smtpSettings.Port;</span><br><span class="line">            smtpClient.EnableSsl = _smtpSettings.EnableSsl;</span><br><span class="line">            smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;</span><br><span class="line">            return smtpClient;</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">        private string Read(IDictionary&lt;string, object&gt; dictionary, string key) &#123;</span><br><span class="line">            return dictionary.ContainsKey(key) ? dictionary[key] as string : null;</span><br><span class="line">        &#125;</span><br><span class="line">    </span><br><span class="line">        private IEnumerable&lt;string&gt; ParseRecipients(string recipients) &#123;</span><br><span class="line">            return recipients.Split(new[] &#123;',', ';'&#125;, StringSplitOptions.RemoveEmptyEntries);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Now the last piece that needs to be done is implementing the channel selector that gets used by Orchard messaging to know which template to use. Again, I made sure to make the channel name <em>PlainText</em> and the only other item that I needed to changed was the messageType check and the priority level.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">using Orchard;</span><br><span class="line">using Orchard.Messaging.Services;</span><br><span class="line"></span><br><span class="line">namespace Orchard.MyCustomModule.Services &#123;</span><br><span class="line">    public class DefaultPlainTextMessageChannelSelector : Component, IMessageChannelSelector &#123;</span><br><span class="line">        private readonly IWorkContextAccessor _workContextAccessor;</span><br><span class="line">        public const string ChannelName = "PlainText";</span><br><span class="line"></span><br><span class="line">        public DefaultPlainTextMessageChannelSelector(IWorkContextAccessor workContextAccessor) &#123;</span><br><span class="line">            _workContextAccessor = workContextAccessor;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        public MessageChannelSelectorResult GetChannel(string messageType, object payload) &#123;</span><br><span class="line">            if (messageType == "PlainText") &#123;</span><br><span class="line">                var workContext = _workContextAccessor.GetContext();</span><br><span class="line">                return new MessageChannelSelectorResult &#123;</span><br><span class="line">                    Priority = 49,</span><br><span class="line">                    MessageChannel = () =&gt; workContext.Resolve&lt;IPlainTextMessageChannel&gt;()</span><br><span class="line">                &#125;;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            return null;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Now all that is left is creating the default template that you need in the <em>Views</em> folder to match the name of the template that you set in the <em>PlainTextMessageChannel</em>. To use the new message channel just pass <em>PlainText</em> as the message type and Orchard will wire up everything else.</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">_messageService.Send(<span class="string">"PlainText"</span>, parameters);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+                        <li>
+                            <a href="https://twitter.com/phillipsj73" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/phillipsj" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                        <li>
+                            <a href="https://www.linkedin.com/in/jamie-phillips-695927b0" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; Copyright 2016, Jamie Phillips. Powered by <a target="_blank" href="https://hexo.io/">Hexo</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+</body>
+
+</html>
