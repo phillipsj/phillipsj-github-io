@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.phillipsj.net/"/>
-  <updated>2016-08-26T00:08:20.003Z</updated>
+  <updated>2016-11-29T00:46:31.125Z</updated>
   <id>http://www.phillipsj.net/</id>
   
   <author>
@@ -14,6 +14,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Cake.AppPackager</title>
+    <link href="http://www.phillipsj.net/2016/11/28/Cake-AppPackager/"/>
+    <id>http://www.phillipsj.net/2016/11/28/Cake-AppPackager/</id>
+    <published>2016-11-29T00:42:21.000Z</published>
+    <updated>2016-11-29T00:46:31.125Z</updated>
+    
+    <content type="html">&lt;p&gt;Just published a new package called &lt;a href=&quot;https://www.nuget.org/packages/Cake.AppPackager/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Cake.AppPackager&lt;/a&gt;. It integrates &lt;a href=&quot;https://goo.gl/2g25OD&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;App Packager&lt;/a&gt; into the Cake pipeline so you can now create your Windows app packages using Cake.&lt;/p&gt;
+&lt;p&gt;Still need to add additional unit tests. Please feel free to open an issue in the &lt;a href=&quot;https://github.com/phillipsj/Cake.AppPackager&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;repo&lt;/a&gt;.&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Just published a new package called &lt;a href=&quot;https://www.nuget.org/packages/Cake.AppPackager/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Cake.AppPac
+    
+    </summary>
+    
+    
+      <category term="Open Source" scheme="http://www.phillipsj.net/tags/Open-Source/"/>
+    
+      <category term="Cake" scheme="http://www.phillipsj.net/tags/Cake/"/>
+    
+  </entry>
   
   <entry>
     <title>Extending the Orchard Message Service</title>
@@ -687,35 +711,6 @@
       <category term="Orchard" scheme="http://www.phillipsj.net/tags/Orchard/"/>
     
       <category term="Dynamic Forms" scheme="http://www.phillipsj.net/tags/Dynamic-Forms/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Orchard, Gulp, and VS2015 Build Errors</title>
-    <link href="http://www.phillipsj.net/2015/09/29/Orchard-Gulp-and-VS2015-Build-Errors/"/>
-    <id>http://www.phillipsj.net/2015/09/29/Orchard-Gulp-and-VS2015-Build-Errors/</id>
-    <published>2015-09-30T00:00:00.000Z</published>
-    <updated>2016-05-31T00:26:18.113Z</updated>
-    
-    <content type="html">&lt;p&gt;Recently, my team and I, have started using Visual Studio 2015 while working&lt;br&gt;on our Orchard project. Orchard has started using Gulp to manage building some&lt;br&gt;of the javascript used in the Layouts and Dynamic Forms modules. Since VS 2015&lt;br&gt;detects and automatically watches Gulp files, if you have a parameter set at the&lt;br&gt;top of the Gulp file, node modules start automatically downloading and all JS&lt;br&gt;and CSS start getting processed. This is great, until you recieve the following&lt;br&gt;error when publishing.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;The “CollectFilesinFolder” task failed unexpectedly. System.IO.PathTooLongException&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;This error is thrown during the build due to the node_modules having crazy&lt;br&gt;file path lengths. The easiest way to circumvent this issue is to configure the&lt;br&gt;Layouts and Dynamic Forms modules project file to exclude the node_modules&lt;br&gt;folder.  This is quick and easy by adding the ExlcudeFoldersFromDeployment tag&lt;br&gt;in the first property group of each project file.&lt;/p&gt;
-&lt;script src=&quot;//gist.github.com/ec49732c325b7de55d19.js?file=ExcludeExample.xml&quot;&gt;&lt;/script&gt;
-&lt;p&gt;Once that has been added to those project files, publishing now works. Also with&lt;br&gt;this change my GIT deployments to an Azure Website magically started working&lt;br&gt;too. There seems to be a fix in place according to this Github &lt;a href=&quot;https://github.com/OrchardCMS/Orchard/issues/5649&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;issue&lt;/a&gt;, I am curious&lt;br&gt;if it is the same solution or not.&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Recently, my team and I, have started using Visual Studio 2015 while working&lt;br&gt;on our Orchard project. Orchard has started using Gulp to
-    
-    </summary>
-    
-    
-      <category term="Orchard" scheme="http://www.phillipsj.net/tags/Orchard/"/>
-    
-      <category term="Gulp" scheme="http://www.phillipsj.net/tags/Gulp/"/>
-    
-      <category term="VS2015" scheme="http://www.phillipsj.net/tags/VS2015/"/>
     
   </entry>
   
